@@ -1,0 +1,69 @@
+<?php
+/**
+ * Статьи
+ *
+ */
+class Articles_Form_ArticlesSection extends Engine_Form {
+    public function init() {
+        $this->setTableName('articles_section');
+        $this->setTableComment('Разделы статей');
+        
+        $this->setPrimary('id'); 
+        $this->addElement(
+            'Text',
+            'id',
+            array(
+                'label' => 'Разделы статей',
+                'dbField' => array(
+                    'type'  => 'int(10) unsigned',
+                    'default'  => "NOT NULL",
+                    'autoIncrement' => true
+                ),
+                'ignore' => true
+            )
+        );
+        
+        $this->setPosition('pos');
+        $this->addElement(
+            'Hidden',
+            'pos',
+            array(
+                'label' => 'Позиция',
+                'dbField' => array(
+                    'type'     => 'int(10) unsigned',
+                    'default'  => "NOT NULL default '0'"
+                ),
+                'ignore' => true
+            )
+        );
+        
+        $this->addElement(
+            'text',
+            'name',
+            array(
+                'label' => 'Заголовок раздела',
+                'required' => true
+            )
+        );
+        
+        $this->addElement(
+            'Url',
+            'url',
+            array(
+                'label' => 'Ссылка',
+                'required' => true
+            )
+        );
+        
+        $this->addElement(
+            'Checkbox',
+            'display',
+            array(
+                'label' => 'Отображать',
+                'checked' => true
+            )
+        );
+        
+        
+    }
+}

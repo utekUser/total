@@ -1,0 +1,570 @@
+.catalog-oils{
+    margin: 0 0 10px 0;
+}
+.catalog-oils ul{
+    background: #fff;
+    list-style: none;
+    margin: 2px 0 0 0;
+}
+
+div.oil-main-section {
+    background: url("/themes/default/images/white-block-b.png") no-repeat bottom center;
+    padding-bottom: 5px;
+    width: 200px;
+}
+.catalog-oils a{
+    text-decoration: none;
+}
+.catalog-oils a.active {
+    color: #303030;
+    font-weight: bold;
+}
+
+.catalog-oils ul div {
+    background: url("/themes/default/images/razd.png") repeat-x center top;
+    margin-left: 10px;
+    padding: 5px 0;
+}
+.catalog-oils ul li {
+    position: relative;
+    margin:0;
+}
+.catalog-oils ul li.li-first > div {
+    background: none;
+}
+.catalog-oils ul li.li-first > div > a {
+    font-weight: bold;
+}
+.catalog-oils ul ul{
+    display: none;
+}
+.catalog-oils ul ul div {
+    margin-left: 20px;
+}
+.catalog-oils ul ul ul {
+    display: none;
+}
+.catalog-oils ul ul ul div {
+    margin-left: 30px;
+    padding: 3px 0;
+}
+.catalog-oils ul ul ul a {
+    font-size: 11px;
+}
+.catalog-oils ul ul li.active,
+.catalog-oils ul ul ul li.active,
+.catalog-oils ul ul ul li:hover{
+	background: #ffeab6;
+}
+.catalog-oils .menu-state{
+    position: absolute;
+	top: 7px;
+	right: 10px;
+	cursor: pointer;
+	display: block;
+	width: 11px; 
+	height: 11px;
+	background: url(/themes/default/images/menu-state.png) 0 0 no-repeat;
+}
+.catalog-oils .menu-hidden{
+    background-position: 0 -11px;
+}
+
+
+.search-form{
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+div.input-field{
+	/*background: url(/themes/default/images/input-field.png) no-repeat 100% -25px;*/
+    padding: 0 6px 0 0;
+}
+div.input-field div {
+    background: url(/themes/default/images/input-field.png) no-repeat 0 -50px transparent;
+    height: 25px;
+    padding: 0 0 0 6px;
+}
+div.input-field div div {
+    background: url(/themes/default/images/input-field.png) repeat-x 0 0;
+    height: 25px;
+    padding: 0 3px;
+}
+div.input-field input{
+	/*background: none;*/
+    border: none;
+    color: #000000;
+    font: 12px/25px Verdana,Tahoma,Arial,serif;
+    height: 25px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+.search-block{
+	margin: 15px 0 20px 0;
+}
+.search-results{
+	margin: 0 0 15px 0;
+}
+.search-form-label,
+.search-form-field,
+.search-form-button{
+	float: left;
+}
+.search-opt-row div.search-form-button{
+    line-height: 1;
+}
+.search-form-button input{
+    background: url("/themes/default/images/search-button.png") top center;
+    border: 0;
+    width: 62px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 0;
+}
+.search-form-label{
+	color: #303030;
+	font-weight: bold;
+	line-height: 25px;
+	margin-right: 10px;
+}
+.search-form-field{
+	width: 335px;
+	margin-right: 15px;
+}
+
+.search-form-options{
+	margin: 7px 0 0 0;
+	
+}
+.search-form-options form{
+	position: relative;
+}
+.search-form-options span{
+	height: 14px;
+	line-height: 14px;
+	margin: 0 10px;
+}
+.option-row{
+	overflow: hidden;
+	line-height: 2.2;
+}
+.option-title{
+	float: left;
+	width: 120px;
+}
+.option-type{
+	float: left;
+	min-width: 160px;
+	min-width: 160px;
+}
+.options-search{
+	position: absolute;
+	right: 15px;
+	bottom: -20px;
+}
+
+
+.section-info{
+    margin: 10px 0 20px 0;
+}
+.catalog-item{
+	margin: 20px 0 10px;
+	overflow: hidden;
+}
+.item-left{
+	float: left;
+	width: 160px;
+    width: 100px;
+	text-align: center;
+}
+.item-photo{
+	border: 1px solid #ffb400;
+}
+.item-photo img {
+    width: 100%;
+}
+.item-detailed{
+	font-size: 11px;
+	margin: 10px 0 0;	
+}
+.item-info{
+	margin: 0 0 0 175px;
+    margin: 0 0 0 115px;
+}
+.item-info a{
+	color: #0c0c0c;
+	text-decoration: none;
+    font-size: 20px;
+}
+.item-name a {
+    font-size: 12px;
+}
+.item-info a:hover{
+	color: #39C;
+	text-decoration: underline;
+}
+.item-info .order-history{
+	margin: 5px 0 0 0;
+}
+.item-info .order-history th{
+	background: none;
+}
+.item-info .order-history td{
+	padding: 2px 0;
+	text-align: center;
+	background: none;
+}
+
+.item-info .order-history td.item-name{
+	text-align: left;
+}
+.item-check{
+    width: 40px;
+}
+.item-check input{
+    cursor: pointer;
+}
+.item-volume{
+	width: 110px;
+}
+.item-price{
+	width: 100px;
+}
+.item-amount{
+	width: 130px;
+}
+.item-amount .input-field{
+    float: left;
+}
+
+.item-action{
+	width: 110px;
+}
+.item-info .input-field{
+	width: 50px;
+	margin: 0 auto;
+}
+
+a.add-to-bask {
+	/*display: block;
+	width: 80px;
+	height: 24px;
+	background: url(/themes/default/images/add-to-basket.png) no-repeat 0 0;
+	font-size: 0;
+	margin: 0 auto;*/
+display: block;
+    width: 96px;
+    height: 31px;
+    background: url(/themes/default/images/newdesign/tobasket.png) no-repeat 0 0;
+    font-size: 0;
+    margin: 0 auto;
+}
+a.add-to-bask:hover{
+	/*background-position: 0 -24px;*/
+background: url(/themes/default/images/newdesign/tobasketh.png) no-repeat 0 0;
+}
+a.delete-item{
+	display: block;
+	width: 80px;
+	height: 24px;
+	background: url(/themes/default/images/delete-item.png) no-repeat 0 0;
+	font-size: 0;
+	margin: 0 auto;
+}
+a.delete-item:hover{
+	background-position: 0 -24px;
+}
+
+.item-info span{
+	color: #fe001a;
+	font-weight: bold; 
+}
+
+.current-order{
+	margin: 30px 0 5px 0;
+}
+.current-order-title{
+	color: #333;
+ 	text-transform: uppercase;
+ 	font-weight: bold;
+ 	height: 35px;
+ 	line-height: 35px; 
+ 	position: relative;	
+}
+.current-order-title span{
+ 	padding: 0 0 0 55px;
+}
+.current-order-title img{
+ 	position: absolute;
+ 	bottom: 0;
+ 	z-index: 0;
+}
+.current-order .item-info{
+	margin: 0;
+}
+.current-order .item-info span{
+	color: #0c0c0c;
+	font-weight: bold;
+}
+.current-order .order-history td{
+	padding: 10px 0 2px 0;
+	line-height: 1.3;
+}
+
+.total-sum{
+	color: #8a8a8a;
+	font-weight: bold;
+	padding: 7px 0;
+}
+.total-sum span{
+	color: #fe001a;
+	font-size: 16px;
+}
+.appr-order {
+	margin: 10px 0 0 0;
+	overflow:hidden;
+}
+.appr-order_show {
+    display: none;
+}
+
+a.arrange {
+	display: block;
+	float:left;
+	width: 136px;
+	height: 24px;
+	background: url(/themes/default/images/appr-order.png) no-repeat 0 0;
+	font-size: 0;
+}
+a.arrange:hover{
+	background-position: 0 -24px;
+}
+
+input.recount {
+	display: block;
+	float:right;
+	width: 105px;
+	height: 24px;
+	background: url(/themes/default/images/recount.png) no-repeat 0 0;
+	font-size: 0;
+	border: 0;
+	cursor: pointer;
+}
+input.recount:hover{
+	background-position: 0 -24px;
+}
+
+
+
+.item-filtr {
+	margin: 10px 0 20px 0;
+}
+.item-filtr .item-info{
+	margin: 0;
+}
+.item-filtr .item-left{
+	margin: 0 15px 5px 0;
+}
+.search-number-field{
+	width: 145px;
+	margin-right: 15px;
+	float: left;
+}
+.search-example{
+	font-size: 11px;
+	margin: 6px 0;
+}
+
+.search-opt{
+	color: #303030;
+	font-size: 11px;
+	line-height: 1.7;
+}
+.search-opt-title{
+	font-size: 12px;
+	font-weight: bold;
+}
+.search-opt-row{
+	overflow: hidden;
+	padding: 4px 0;
+}
+.search-opt-row .input-field,
+.search-opt-row .search-item-plus,
+.search-opt-row .search-form-button{
+	float: left;
+	height: 25px;
+	line-height: 25px;
+}
+.search-opt-row .input-field{
+	width: 250px;
+	margin: 0 7px;
+}
+
+input.plus-item,
+input.minus-item{
+	border: medium none;
+	width: 27px;
+	height: 25px;
+	margin-right: 8px;
+	cursor: pointer;
+}
+input.plus-item{
+	background: url(/themes/default/images/plus.png) no-repeat 0 0;
+}
+input.minus-item{
+/*	background: url(/themes/default/images/minus.png) no-repeat 0 0;*/
+	background: url(/themes/default/images/newdesign/minusy.png) no-repeat 0 0;
+height: 31px;
+width: 31px
+	
+}
+input.plus-item:hover{
+	background-position: 0 -25px;
+}
+
+input.minus-item:hover{
+/*	background-position: 0 -25px;*/
+background: url(/themes/default/images/newdesign/minusyh.png) no-repeat 0 0;
+}
+
+.filter-mann{
+	overflow: hidden;
+	line-height: 47px;
+}
+.filter-mann img,
+.filter-mann span{
+	float: left;
+}
+.filter-mann a{
+    font-weight: bold;
+    font-size: 14px;
+}
+.search-results h2{
+	color: #303030;
+	margin: 40px 0 0 0;
+}
+.search-results .item-info{
+	margin: 0;
+	position: relative;
+}
+.to-basket{
+    position: absolute;
+    right: 0;
+    top: -25px;
+}
+.to-basket span{
+    display: block;
+    float: left;
+    margin: 15px 5px 0 0;
+}
+a.add-more,
+a.add-less{
+    width: 23px;
+    height: 24px;
+    display: block;
+    font-size: 0;
+    float: left;
+    background: url(/themes/default/images/add.png) no-repeat 0 0;
+    margin: 0 3px;
+}
+a.add-more:hover{
+    background-position: 0 -24px;
+}
+a.add-less{
+    background-position: 0 -48px;
+}
+a.add-less:hover{
+    background-position: 0 -72px;
+}
+
+
+
+.see-pictures{
+	margin: 8px auto 0 auto;
+	overflow: hidden;
+	width: 75px;
+}
+.img-pager-l{
+	background: url(/themes/default/images/img-pager-l.png) no-repeat top left;
+	padding: 0 0 0 5px;
+	float: left;
+}
+.img-pager-r{
+	background: url(/themes/default/images/img-pager-r.png) no-repeat top right;
+	height: 22px;
+	padding: 0 5px 0 0;
+	float: left;
+}
+.img-pager-m{
+	background: url(/themes/default/images/img-pager-m.png) repeat-x top center;
+	height: 22px;
+	float: left;
+}
+
+.see-pictures a{
+	background: url(/themes/default/images/scroller.png) no-repeat 0 0;
+    display: block;
+    float: left;
+    font-size: 0;
+    height: 22px;
+    width: 21px;
+}
+.see-pictures a.active {
+    background-position: 0 -44px;
+}
+.see-pictures a:hover {
+    background-position: 0 -22px;
+}
+.oil-detailed{
+	margin-bottom: 10px;
+}
+.oil-detailed h1{
+	color: #0c0c0c;
+	font-weight: bold;
+	font-size: 16px;
+	background: none;
+	text-transform: none;
+}
+.oil-detailed h2{
+	color: #0c0c0c;
+	font-weight: bold;
+	font-size: 12px;
+	background: none;
+	margin: 20px 0 15px 0;
+}
+.oil-detailed .catalog-item{
+	margin: 5px 0 15px 0;
+}
+.oil-detailed .back{
+	text-align: left;
+}
+.oil-info{
+	margin-bottom: 10px; 
+}
+a.delete-item {
+    width: 85px;
+    height: 31px;
+    margin: 0px;
+    background: url(/themes/default/images/newdesign/deletey.png) 0px 0px no-repeat;
+}
+a.delete-item:hover {
+    background: url(/themes/default/images/newdesign/deleteyh.png) 0px 0px no-repeat;
+}
+input.recount {
+    width: 109px;
+    height: 31px;
+    margin: 15px 0 0 10px;
+    background: url(/themes/default/images/newdesign/reschet.png) 0px 0px no-repeat;
+}
+input.recount:hover {
+    background: url(/themes/default/images/newdesign/rescheth.png) 0px 0px no-repeat;
+}
+a.arrange {
+    width: 119px;
+    height: 31px;
+    margin: 15px 0 0 10px;
+    background: url(/themes/default/images/newdesign/doorder.png) 0px 0px no-repeat;
+}
+a.arrange:hover {
+   background: url(/themes/default/images/newdesign/doorderh.png) 0px 0px no-repeat;
+}

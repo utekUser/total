@@ -1,0 +1,224 @@
+    .new-row-l{
+	width: 800px;
+	height: 30px;
+	margin: 0 0 15px 0;
+	background: url("/application/themes/admin/images/new-row-l.png") left top no-repeat;
+}
+.new-row-r{
+	background: url("/application/themes/admin/images/new-row-r.png") right top no-repeat;
+	height: 100%;
+}
+.new-row-m{
+	background: url("/application/themes/admin/images/new-row-m.png") center top repeat-x;
+	height: 100%;
+	margin: 0 5px 0 5px;
+	padding: 7px 0 0 10px;
+}
+
+
+.error-l{
+	width: 800px;
+	height: 30px;
+	margin: 0 0 15px 0;
+	background: url("/application/themes/admin/images/error-l.png") left top no-repeat;
+}
+.error-r{
+	background: url("/application/themes/admin/images/error-r.png") right top no-repeat;
+	height: 100%;
+}
+.error-m{
+	background: url("/application/themes/admin/images/error-m.png") center top repeat-x;
+	height: 100%;
+	margin: 0 5px 0 5px;
+	padding: 7px 0 0 10px;
+}
+.edit-div{
+	float: left;
+    clear: both;
+    margin-top: 15px;
+}
+
+.edit-div-tl{
+	background: url("/application/themes/admin/images/edit-div-tl.jpg") no-repeat left top;
+	padding: 0 0 0 7px;
+}
+.edit-div-tr{
+	background: url("/application/themes/admin/images/edit-div-tr.jpg") no-repeat right top;
+	padding: 0 6px 0 0;
+	height: 7px;
+}
+.edit-div-tm{
+	height: 7px;
+	background: url("/application/themes/admin/images/edit-div-tm.png") repeat-x top;
+}
+
+.edit-div-ml{
+	background: url("/application/themes/admin/images/edit-div-ml.png") repeat-y left center #f5f4f4;
+}
+.edit-div-mr{
+	background: url("/application/themes/admin/images/edit-div-mr.png") repeat-y right center;
+    width: 100%;
+	height:100%;
+}
+.edit-div-mm{
+    width: 100%;
+	height:100%;
+}
+.edit-div-bl{
+	background: url("/application/themes/admin/images/edit-div-bl.jpg") no-repeat left top;
+	padding: 0 0 0 7px;
+	margin: 0 0 15px 0;
+}
+.edit-div-br{
+	background: url("/application/themes/admin/images/edit-div-br.jpg") no-repeat right top;
+	height: 6px;
+	padding: 0 6px 0 0;
+}
+.edit-div-bm{
+	height: 6px;
+	background: url("/application/themes/admin/images/edit-div-bm.png") repeat-x top;
+}
+
+.edit-table{
+	width: 825px;
+	margin: 0 7px;
+	background: #fff;
+}
+.edit-table td{
+	border: 1px solid #e7e7e7;
+	padding: 5px;
+	vertical-align: top;
+}
+.edit-table td.td-title{
+	width: 140px;
+	color: #555;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.edit-table a, .edit-table a:hover{
+	color: #336699;
+	text-decoration: underline;
+}
+div.div-title{
+	position: relative;
+	padding: 0 25px 0 0;
+}
+td.td-title img{
+	position: absolute; 
+	cursor: pointer; 
+	top:0; 
+	right: 0;
+}
+.edit-table input,
+.edit-table textarea{
+	
+}
+.edit-table input[type="submit"]{
+    cursor: pointer;
+}
+.edit-table input[type="text"]{
+	/*border: 1px solid #555;*/
+	width: 100%;
+	height: 30px;
+	margin: 0 0 5px 0;
+}
+.edit-table select{
+    width: 100%;
+	min-height: 30px;
+	margin: 0 0 5px 0;
+}
+.remark{
+	color: #999;
+	font-size: 11px;
+	padding: 0 0 0 5px;
+}
+.edit-table input.checkbox{
+	width:15px;
+	height: 15px;
+	border: 0;
+}
+.edit-table textarea{
+	width: 100%;
+	/*border: 1px solid #555;*/
+}
+
+.hint{ 
+	width:520px; 
+	position: absolute;
+	top: 8px;
+	left: 87px;
+	z-index: 10;
+	font-weight: normal;
+}
+.hint-t{
+	background: url("/application/themes/admin/images/hint-t.png") left no-repeat;
+	height: 25px;
+	width: 100%;
+}
+.hint-m{
+	background: url("/application/themes/admin/images/hint-m.png") left repeat-y;
+	padding: 0 40px 0 20px;
+	position: relative;
+}
+.hint-b{
+	background: url("/application/themes/admin/images/hint-b.png") left no-repeat;
+	height: 17px;
+	width: 100%;
+}
+.hint-close{
+	width: 12px;
+	height: 12px;
+	background: url("/application/themes/admin/images/hint-close.png") left top no-repeat;
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+    top: 3px;
+}
+
+
+
+.element-error {
+    border: 1px solid #BF3030 !important;
+}
+ul.errorlist {
+    list-style:none;
+    color: #BF3030;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: -4px 0 4px;
+}
+
+.buttons {
+    margin: 0 0 15px 0;
+}
+.buttons input,
+.buttons a {
+    color: #FFFFFF;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    float: left;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+.buttons a {
+	height: 16px;
+    height: auto;
+}
+.buttons a.del {
+    background-color: #E80000;
+    border: 1px solid #CD0000;
+}
+
+.temp_passw span{
+
+}
+.temp_passw a{
+    margin-left: 20px;
+}
+
+div.passwords{
+    margin: 10px 0 0 0;
+    display: none;
+}

@@ -1,0 +1,54 @@
+"KOWCORE_FORM_ADMIN_GLOBAL_TIPS";"Show popup tooltips that is appearing when user mouseover on HTML elements such as links and images."
+"KOWCORE_FEATURED_PAGE_DESCR";"On this page you can mark content of your Social Network as `featured` and then place appropriate widget on pages in Layour Editor. You need to choose type of the content or choose `Users` - if you want to mark
+users."
+
+"Item Type";"Item Type"
+
+"Most Comment Posters";"Most Comment Posters"
+"Featured Events";"Featured Events"
+"Featured Groups";"Featured Groups"
+"Featured Polls";"Featured Polls"
+"Featured Contests";"Featured Contests"
+"Featured Albums";"Featured Albums"
+"Featured Videos";"Featured Videos"
+"Featured Classifieds";"Featured Classifieds"
+"Featured Users";"Featured Users"
+"Featured Blogs";"Featured Blogs"
+"Featured Music";"Featured Music"
+
+"%s comment";"%s comment";"%s comments"
+"%s like";"%s like";"%s likes"
+"%s view";"%s view";"%s views"
+
+"KOWCORE_SUGGEST_FRIENDS_DESCRIPTION";"Please select friends from list to whom you are going to send message."
+
+"Nobody rated it.";"Nobody rated it."
+"Correct parameters needed.";"Correct parameters needed."
+
+"Login first.";"You should be logged in."
+"You have no friends to whom you can promote.";"You have no friends to whom you can promote."
+"Your message was successfully sent.";"Your message was successfully sent."
+
+"Tag Cloud";"Tag Cloud"
+"Displays tag cloud of the subject.";"Displays tag cloud of the subject."
+
+"Most Rated Events";"Most Rated Events"
+"Displays 6 most rated events.";"Displays 6 most rated events."
+
+"Most Rated Users";"Most Rated Users"
+"Displays 6 most rated users.";"Displays 6 most rated users."
+
+"Most Rated Groups";"Most Rated Groups"
+"Displays 6 most rated groups.";"Displays 6 most rated groups."
+
+"Current score";"Current score"
+"Max score";"Max score"
+"Count of votes";"Count of votes"
+
+"Tell a Friend";"Tell a Friend"
+"Promote";"Promote"
+
+"vote_MUSIC_UPLOAD_DESCRIPTION";"Click on 'Add Music' link to add your music into voting and get rated."
+
+"KOWCORE_ADDTHIS_TYPE_DESCR";"Type of the `Add This Widget`"
+"KOWCORE_FORM_ADMIN_ADDTHIS_PROFILE";"Add This profile ID. You should be registered on addthis.com, you can get it from your account."

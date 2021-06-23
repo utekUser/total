@@ -1,0 +1,448 @@
+<?php
+function timeMeasure() {
+    list($msec, $sec) = explode(chr(32), microtime());
+    return ($sec+$msec);
+}
+define('TIMESTART', timeMeasure()); //Определяем константу в которой будем хранить время старта
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Томавтотрейд</title>
+    <?php //echo $this->headTitle(); ?>
+    <?php //echo $this->headDescription(); ?>
+    <?php //echo $this->headKeywords(); ?>
+    <?php if (Engine_Auth::getAuth()) { ?>
+    <style type="text/css" media="print">#wpadminbar { display:none; }</style>
+    <style type="text/css">
+    	html { margin-top: 24px !important; }
+    	* html body { margin-top: 24px !important; }
+    </style>
+    <link href="/application/themes/admin/css/admin-bar.css" rel="stylesheet" type="text/css" media="all" />
+    <?php } ?>
+    <?php if (true) { ?>
+    <link href="/externals/ie6/css/style-browser.css" rel="stylesheet" type="text/css" media="all" />
+    <?php } ?>
+    
+    <link rel="stylesheet" type="text/css" media="all" href="/themes/default/css/styles.css"  />
+    <script type="text/javascript" src="/externals/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/externals/scrollto/jquery.scrollTo-1.4.2-min.js"></script>
+    
+    <script type="text/javascript" src="/themes/default/js/common.js"></script>
+    
+    <script type="text/javascript" src="/externals/avtoritet/js/avtoritet.partner.js"></script>
+    <link rel="stylesheet" type="text/css" href="/externals/avtoritet/css/avtoritet.partner.css" />
+    
+    <script type="text/javascript" src="/externals/slimbox/js/slimbox2.js"></script>
+    <link rel="stylesheet" type="text/css" href="/externals/slimbox/css/slimbox2.css" />
+    <script type="text/javascript">
+    $(function(){
+        $('a.gallery').slimbox();
+    });
+    </script>
+    
+    <script type="text/javascript" src="/externals/jcarousel/jquery.jcarousel.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/externals/jcarousel/jcarouselskin.css" />
+    <script type="text/javascript">
+    function mycarousel_initCallback(carousel) {
+    	jQuery('.jcarousel-control a').bind('click', function() {
+    		carousel.scroll(jQuery.jcarousel.intval(jQuery(this).text()));
+    		return false;
+    	});
+    };
+    jQuery(document).ready(function() {
+    	jQuery("#mycarousel").jcarousel({
+    		scroll: 1,
+    		wrap: 'circular',
+    		auto: 7,
+    		initCallback: mycarousel_initCallback,
+            itemVisibleInCallback: {
+                onAfterAnimation: function(c, o, i, s) {
+                    var size = c.options.size; 
+                    i = (((i - 1) % size) + size) % size;
+                    jQuery('.jcarousel-control a').removeClass('control-active');
+                    jQuery('.jcarousel-control a:eq('+i+')').addClass('control-active');
+                }
+            }
+    	});
+    }); 
+    </script>
+
+</head>
+
+<body>
+    <?php /*
+    <div style="width:100%; background-color:#ffff00; text-align:center; padding:5px 0; font-size:16px;">
+        <div style="width: 1000px; margin: 0 auto">Уважаемые клиенты, в связи с техническим обновлением – информация по остаткам товаров может быть не актуальна. Приносим свои извинения за временные неудобства.</div>
+    </div>
+    <?php */ ?>
+<?php if (Engine_Init::checkAgent()) { ?>
+<div id="bad_browser">
+    <div class="info">
+        Вы используете устаревший браузер.
+        <a onclick="toggle('good_browsers');">Подробнее »</a>
+        <div id="good_browsers">
+            Чтобы использовать все возможности сайта, загрузите и установите один из этих браузеров:
+            <div><a style="background: url(&quot;http://vkontakte.ru/images/chrome.gif&quot;) no-repeat scroll 50% 6px transparent;" target="_blank" href="http://www.google.com/chrome/" class="fl_l">Google Chrome</a><a style="background: url(&quot;http://vkontakte.ru/images/safari.gif&quot;) no-repeat scroll 50% 0pt transparent;" target="_blank" href="http://www.apple.com/safari/" class="fl_l">Safari</a><a style="background: url(&quot;http://vkontakte.ru/images/opera.gif&quot;) no-repeat scroll 50% 7px transparent;" target="_blank" href="http://www.opera.com/" class="fl_l">Opera</a><a style="background: url(&quot;http://vkontakte.ru/images/firefox.gif&quot;) no-repeat scroll 50% 7px transparent;" target="_blank" href="http://www.mozilla-europe.org/" class="fl_l">Mozilla Firefox</a></div>
+        </div>
+    </div>
+</div>
+<?php } ?>
+<div id="wrapper">
+	<div id="header">
+		<a href="/oils/" class="logo-total"><img alt="" src="/themes/default/images/total-logo.png" /></a>
+		<a href="/oils/" class="logo-elf"><img alt="" src="/themes/default/images/elf-logo.png" /></a>
+		<a href="/filters/" class="logo-mann"><img alt="" src="/themes/default/images/mann-logo.png" /></a>
+		<a href="/" class="logo-img"><img alt="" src="/themes/default/images/tom-auto-treid-logo.png" /></a>
+		<div class="logo">
+			<a href="/"><img alt="" src="/themes/default/images/tom-auto-treid.png" /></a>
+			<p>Официальный дистрибьютер TOTAL Lubrifiants, MANN-HUMMEL</p>
+		</div>
+	</div>
+	<div id="top-menu"><?php echo $this->layout()->topmenu; ?></div>
+	<div id="left-panel">
+	<?php
+        $auth = Zend_Auth::getInstance()->setStorage(new Zend_Auth_Storage_Session('Zend_Auth_User'));
+        if ($auth->hasIdentity()) {
+        ?>
+        <div class="client-block">
+			<div class="white-block-t"></div>
+			<div class="white-block">
+				<div class="client-name"><?php if($this->layout()->userInfo['name'] != '') echo $this->layout()->userInfo['name']; ?></div>
+                <ul class="left-menu">
+                    <li class="first "><a href="/control/">Личный кабинет</a></li>
+                    <li class=""><a href="/control/profile/">&nbsp;&mdash;&nbsp;Личные данные</a></li>
+                    <li class=""><a href="/messages/mailbox/">Сообщения</a>&nbsp;<b>(<?php echo $this->layout()->unread; ?>)</b></li>
+                    <?php if (!$this->layout()->isManager) { ?>
+                    <li class="" id="basket"><?php echo Basket_Models_Control::getCount(); ?></li>
+                    <li class=""><a href="/control/history/">История заказов</a></li>
+                    <?php } ?>
+                    <!---->
+                </ul>
+			</div>
+			<div class="white-block-b"></div>
+			<a href="/account/logout/" class="client-exit"></a>
+		</div>	
+		<?php } ?>
+		
+	    <?php if ($this->layout()->module == 'oils') { ?>
+	    
+            
+	    <?php echo $this->layout()->oilsMenu; ?>
+	    <script type="text/javascript">
+        $(function(){
+            var ul = $('.catalog-oils').find('ul:hidden');
+            ul.parent().find('div:first').append('<span class="menu-state"></span>');
+            
+            var active = $('.catalog-oils').find('li.active');
+            active.parent().show();
+            active.parent().parent().parent().show();
+            active.find('ul:first').show();
+            active.find('div:first').find('span').addClass('menu-hidden');
+            
+            $('.menu-state').click(function() {
+                var ul = $(this).parent().parent().find('ul:first');
+                if (ul.is(":visible")) {
+                    ul.hide("slow");
+                    $(this).removeClass("menu-hidden");
+                } else {
+                    ul.show("slow");
+                    $(this).addClass("menu-hidden");
+                }
+            });
+        })
+        </script>
+        <?php if (false) { ?>
+	    <div class="catalog-list">
+			<div class="white-block-t"></div>
+			<div class="white-block">
+				<div class="catalog-title">Каталог продукции</div>
+			</div>
+			<div class="catalog-list-inner">
+				<ul>
+					<li class="li-first">
+						<div><a href="#" class="active">Масла TOTAL</a>
+						<img alt="" src="/themes/default/images/menu-shown.png" /></div>
+						<ul>
+							<li>
+								<div><a href="#">Автомасла</a><span class="menu-state"></span></div>
+								<ul>
+									<li><div><a href="#">Автомобильные масла</a></div></li>
+									<li><div><a href="#">Моторные масла</a></div></li>
+									<li><div><a href="#">Трансмиссионные масла</a></div></li>
+									<li><div><a href="#">Жидкости ATF</a></div></li>
+									<li><div><a href="#">Антифризы</a></div></li>
+									<li><div><a href="#">Тормозные жидкости</a></div></li>
+									<li><div><a href="#">Гидравлические жидкости</a></div></li>
+									<li><div><a href="#">Смазки</a></div></li>
+									<li><div><a href="#">Моторные масла</a></div></li>
+									<li><div><a href="#">INEO 5W-30/5W-40</a></div></li>
+								</ul>
+							</li>
+							<li>
+								<div><a href="#">Мото</a></div>
+							</li>
+							<li><div><a href="#">Грузовые масла</a></div></li>
+							<li><div><a href="#">Сельское хозяйство</a></div></li>
+							<li><div><a href="#">Строительство</a></div></li>
+							<li><div><a href="#">Промышленность</a></div></li>
+							<li><div><a href="#">Рыболовство</a></div></li>
+							<li>
+								<div><a href="#">Катера</a></div>
+							</li>
+							<li>
+								<div><a href="#">Судовые масла</a></div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="white-block">
+				<ul>
+					<li class="li-first">
+						<div><a href="#"><b>Масла ELF</b></a></div>
+					</li>
+				</ul>
+			</div>
+			<div class="white-block-b"></div>
+			
+		</div>
+		  <?php } ?>
+	    <?php } elseif ($this->layout()->module == 'filters') { ?>
+	    <div class="catalog-filter">
+            <div class="white-block-t"></div>
+            <div class="white-block">
+                <div class="catalog-title">Каталог фильтров</div>
+            </div>
+            <ul>
+                <?php foreach ($this->layout()->filterSection as $filerSection) { ?>
+                <?php if($filerSection['url'] == $this->layout()->sectionUrl) $class = 'class="active"'; else $class = '';  ?>
+                <li <?php echo $class; ?>><a href="/filters/<?php echo $filerSection['url']; ?>/"><?php echo $filerSection['name']; ?></a></li>
+                <?php } ?>
+            </ul>
+            <div class="white-block-b"></div>
+	    </div>
+	    <?php }  ?>
+	
+        
+		<div class="vertical-menu">
+			<div class="white-block-t"></div>
+			<div class="white-block"><?php echo $this->layout()->leftmenu; ?></div>
+		</div>
+		<?php if (Engine_Cms::displayContent(1)) { ?>
+		<div class="contacts">
+			<div class="white-block">
+				<div class="title">Контакты</div>
+				<div class="contacts-info"><?php echo Engine_Cms::displayContent(1); ?></div>
+			</div>
+		</div>
+		<?php } ?>
+		<div class="scheme">
+			<div class="white-block">
+				<a href="http://total.tomsk.ru/kontakty-i-shema-proezda-kompanii-tomavtotrejd-/" rel="nofollow">Схема проезда</a>
+			</div>
+			<div class="white-block-b"></div>
+		</div>
+		<?php
+        if (!$auth->hasIdentity()) {
+        ?>
+        <div class="auth">
+			<div class="white-block-t"></div>
+			<div class="white-block">
+				<form method="post" action="/account/login/" name="auth" >
+					<div><span>Логин:</span><div class="field"><div><div><input type="text" name="login" value="" /></div></div></div></div>
+					<div><span>Пароль:</span><div class="field"><div><div><input type="password" name="password" value="" /></div></div></div></div>
+				</form>
+				<div><a href="/account/signup/">Регистрация</a></div>
+				<div class="forget_pass"><a href="/account/restore/">Забыли пароль?</a></div>
+				<input type="image" src="/themes/default/images/enter.png" class="enter" onclick="document.auth.submit();" />
+			</div>
+			<div class="white-block-b"></div>
+		</div>
+		<?php } ?>
+		<div class="ask-question">
+			<a href="/guestbook/">Задать вопрос</a>
+		</div>
+		
+		<?php if (Engine_Cms::displayContent(2)) { ?>
+		<div class="left-panel-banner"><?php echo Engine_Cms::displayContent(2); ?></div>
+		<?php } ?>
+		
+	</div>
+	
+	<!--content start-->
+	<div id="content">
+		<?php
+		$select = Engine_Application::getPageConf();
+	    if ($select['main']) {
+	        include 'main.tpl';    
+	    } else { 
+	        if (!$select['module']) {
+            ?>
+            <div class="white-fon">
+                <div class="white-fon-tl">
+                    <div class="white-fon-tr">
+                        <div class="white-fon-tm"></div>
+                    </div>
+                </div>
+                <div class="white-fon-m">
+                <h1><?php echo Engine_Application::getPageHeader(); ?></h1>
+                <?php include 'common.tpl'; ?>
+                </div>
+                <div class="white-fon-bl">
+                    <div class="white-fon-br">
+                        <div class="white-fon-bm"></div>
+                    </div>
+                </div>
+            </div>
+            <?php } else { ?>
+            <div class="white-fon">
+            	<div class="white-fon-tl">
+            		<div class="white-fon-tr">
+            			<div class="white-fon-tm"></div>
+            		</div>
+            	</div>
+            	<div class="white-fon-m">
+                <?php include 'common.tpl'; ?>
+                </div>
+                	<div class="white-fon-bl">
+                		<div class="white-fon-br">
+                			<div class="white-fon-bm"></div>
+                		</div>
+                	</div>
+                </div>
+            <?php } ?>
+	    <?php } ?>
+	</div>
+	<!--content end-->
+	
+	<div class="clear"></div>
+	<div class="empty"></div>
+</div>
+<div id="footer">
+	<div class="footer-inner">
+		<div class="copyright">
+		  Copyright © 2011 «Томавтотрейд»
+    		<div class="avtoritet-partner">
+    			<div class="avtoritet-info">Информационый партнер:&nbsp;</div> 
+    			<a class="up-window-item" href="http://avtoritet.su" target="_blank" title="Продажа авто, автосалоны, автосервисы, автозапчасти, отзывы владельцев авто, доска объявлений, каталог авто и многое другое только у нас!">Avtoritet.su</a>
+    		</div>
+    		Создание сайта, дизайн сайта: <a href="@">"Tochka.ru"</a>
+		</div>
+		<div class="arrow-up">
+			<a id="arrow-up" href="javascript: void(0);"><img alt="" src="/themes/default/images/arrow-up.png" /></a>
+		</div>
+		<div class="counter">
+		<?php if (Engine_Cms::displayContent(3)) { ?>
+		<?php echo Engine_Cms::displayContent(3); ?>
+		<?php } ?>
+		</div>
+		
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+		$('#arrow-up').click(
+		function() {
+			$.scrollTo('0', 800);
+		}
+	);
+});
+</script>
+<div id="up-window" class="up-window" >
+	<div class="up-window-t">
+		<div class="up-window-tr">
+			<div class="up-window-tm"></div>
+		</div>
+	</div>
+	<div class="up-window-m">
+		<div class="up-window-mr">
+			<div class="up-window-mm">
+				<a class="no-decor" href="http://avtoritet.su" target="_blank" title="Продажа авто, автосалоны, автосервисы, автозапчасти, отзывы владельцев авто, доска объявлений, каталог авто и многое другое только у нас!">
+				AVTORITET.su - продажа авто,<br />
+				автосалоны, автосервисы, автозапчасти,<br />
+				отзывы владельцев авто, доска объявлений,<br />
+				каталог авто и многое другое<br />
+				только у нас!</a>
+				<span>Cайт партнера: </span>
+				<a title="Продажа авто, автосалоны, автосервисы, автозапчасти, отзывы владельцев авто, доска объявлений, каталог авто и многое другое только у нас!" href="http://avtoritet.su" target="_blank">
+				http://avtoritet.su</a>
+			</div>
+		</div>
+	</div>
+	<div class="up-window-b">
+		<div class="up-window-br">
+			<div class="up-window-bm"></div>
+		</div>
+	</div>
+</div>
+<?php if (Engine_Auth::getAuth()) { ?>
+<div id="adminpanel">
+	<div class="quicklinks">
+		<ul>
+			<li class="submenu">
+				<a href="#" class="admin-arrow-down">admin</a>
+				<ul>
+					<li class="submenu-top"></li>
+					<li>
+						<a href="#">Изменить профиль</a>
+					</li>											
+					
+					<li class="submenu-razd"></li>											
+					<li>
+						<a href="/admin/?mode=logout">Выйти</a>
+					</li>
+					<li class="submenu-end"></li>
+				</ul>
+			</li>
+			<li class="menu-razd">|</li>
+			<li>
+				<a href="/admin">Администрирование</a>
+			</li>	
+			<li class="menu-razd">|</li>												
+			<li class="submenu">
+				<a href="#" class="admin-arrow-down">Добавить</a>
+				<ul>
+					<li class="submenu-top"></li>
+					<li>
+						<a href="/admin/sitemap/add">Страницу</a>
+					</li>																					
+					<li>
+						<a href="/admin/cms/user/add">Пользователя</a>
+					</li>
+					<li class="submenu-end"></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<?php } ?>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter15934891 = new Ya.Metrika({id:15934891, enableAll: true});
+        } catch(e) {}
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/15934891" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
+<?php
+echo '<!--Страница сгенерировалась за '.round(timeMeasure()-TIMESTART, 6).' сек.-->';
+?>

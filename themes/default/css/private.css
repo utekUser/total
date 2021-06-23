@@ -1,0 +1,117 @@
+.private-profile{
+    margin: 10px 0;
+}
+.private-profile .field-data{
+    margin: 0 15px 0 0;
+    line-height: 24px;
+}
+.private-profile .input-field{
+    float: left;
+}
+.private-profile .input-field .disabled{
+    color: #777;
+}
+.private-profile .form-field,
+.private-profile .razd-grey{
+    margin: 0 0 10px 0;
+}
+.private-profile textarea.input-long{
+    width: 501px;
+    height: 47px;
+    background: url("/themes/default/images/textarea-big.png") no-repeat left top;
+}
+.private-profile .field-data span.orandzh{
+    position: absolute;
+}
+.safe-changes{
+    width: 163px;
+    height: 25px;
+    /*background: url("/themes/default/images/safe-changes.png") no-repeat 0 0;*/
+    border: 0;
+    /*font-size: 0;*/
+    cursor: pointer;
+    background-color: #00c400;
+    color: #fff;
+    border-radius: 5px;
+}
+.safe-changes:hover{
+    background-position: 0 -25px;
+}
+.input-small{
+    width: 97%;
+}
+.input-middle{
+    width: 97%;
+}
+.input-big{
+    width: 505px;
+}
+.private-profile .no-margin{
+    margin: 0;
+}
+.captcha{
+    margin: 0 0 0 10px;
+}
+div.mes-admin{
+    display: block;
+    margin: 15px 0 0 0;  
+}
+div.mes-admin .title{
+    color: #3399CC;
+    font-weight: bold;
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+    text-transform: uppercase;  
+}
+
+
+
+div.mes-admin form{
+    margin: 15px 0 0 0;
+}
+
+/* Restore password */
+.restore-pass .title{
+    width: 125px;
+}
+.restore-pass .new-email{
+    width: 180px;
+}
+.restore-pass .page-razd{
+    margin: 15px 0 0 135px;
+}
+.auth-form input.restore{
+    margin: 0 0 0 95px;
+}
+.new-pass .title{
+    width: 130px;
+}
+
+
+/* История заказов */
+.history-back{
+    margin-top: 5px;
+}
+
+/* История заказов - подробнее */
+.order-history-info{
+    overflow: hidden;
+    margin: 5px 0;
+}
+.order-history-info table {
+    color: #8a8a8a;
+}
+.order-history-info table td{
+    padding: 4px 0;
+    text-align: right;
+}
+.order-history-info table td strong,
+.order-date,
+.order-status{
+    color: #0c0c0c;
+}
+.total-price{
+	font-size: 14px;
+	font-weight: bold;
+	color: #ff0000;
+}

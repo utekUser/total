@@ -1,0 +1,110 @@
+/** REGISTRATION **/
+.reg-form{
+
+	margin: 15px 0 10px 0;
+    width: 704px;
+}
+.reg-form .razd-grey{
+	margin: 10px 0;
+}
+.form-field{
+	overflow: hidden;
+}
+.field-data{
+	/*float: left;*/
+}
+.field-data .input-field{
+	/*width: 402px;*/
+	margin: 5px 0;
+}
+.field-data span{
+	color: #303030;
+	font-weight: bold;
+	font-size: 14px;
+}
+.field-data span.orandzh{
+	color: #ffb300;
+}
+.field-input{
+	margin: 5px 0;
+}
+.field-info{
+	/*float: right;*/
+	margin-top: 15px;  
+	/*width: 310px;*/
+	font-size: 11px;
+	color: #0e0e0e;
+}
+/*
+input.input-short{
+	border: 0;
+	background: url(/themes/default/images/input-short.png) top left no-repeat;
+	width: 402px;
+	height: 25px;
+	padding: 0 5px;
+}*/
+textarea.input-long{
+	border: 0;
+	/*background: url(/themes/default/images/input-long.png) top left no-repeat;*/
+	width: 402px;
+	height: 47px;
+	padding: 5px;
+	resize: none;
+	overflow: auto;
+    border-radius: 5px;
+}
+.field-info-example{
+	margin: 15px 0 0 0;
+}
+.field-info-example span{
+	color: #595959;
+}
+input.send-form{
+	/*border: none;
+	width: 139px;
+	height: 25px;
+	background: url(/themes/default/images/send-form.png) top center no-repeat; */
+ background: url(/themes/default/images/newdesign/send.png);
+    width: 96px;
+    height: 31px;
+    border: 0px;
+	font-size: 0;
+	cursor: pointer;
+}
+input.send-form:hover{
+	/*background-position: 0 -25px;*/
+background: url(/themes/default/images/newdesign/sendh.png);
+}
+/**************/
+.radio-group{
+    margin: 0 0 20px;
+}
+.radio-group label{
+    cursor: pointer;
+    display: block;
+    margin: 5px 0;
+}
+.radio-group input{
+    margin: 0 10px 0 0;
+}
+.radio-group input[type="radio"] {
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px 0 0;
+    background-image: url(/themes/default/images/newdesign/rbutt.jpg);
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+border: 0px;
+}
+.radio-group input[type="radio"]:checked {
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px 0 0;
+    background-image: url(/themes/default/images/newdesign/rbuttsel.jpg);
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+}

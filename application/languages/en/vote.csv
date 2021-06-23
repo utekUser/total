@@ -1,0 +1,269 @@
+"vote_type_photo_title";"Photo Votings"
+"vote_type_video_title";"Video Votings"
+"vote_type_music_title";"Music Votings"
+
+"vote_type_Latest Votings";"Latest Votings"
+
+"vote_type_photo_description";""
+"vote_type_video_description";""
+"vote_type_music_description";""
+
+"vote_Photo";"Photo"
+"vote_Video";"Video"
+"vote_Music";"Music"
+
+"Voting was deleted.";"Voting was deleted."
+"Please provide another title. Voting with this title already exists.";"Please provide another title. Voting with this title already exists."
+"vote_Start time must be in the future.";"Start time must be in the future."
+"vote_End time must be in the future.";"vote_End time must be in the future."
+
+"Voting already finished.";"Voting already finished."
+"Please provide another title for voting.";"Please provide another title for voting."
+
+"Voting does not exists.";"Voting does not exists."
+"You don't have permissions to finish voting.";"You don't have permissions to finish voting."
+"Voting is not started yet.";"Voting is not started yet."
+
+"Finish Voting";"Finish Voting"
+"Are sure you want to finish voting?";"Are sure you want to finish voting?"
+"Voting finished.";"Voting finished."
+"Voting already started.";"Voting already started."
+
+"Start Voting";"Start Voting"
+
+"vote_type_photo";"Photo"
+"vote_type_music";"Music"
+"vote_type_video";"Video"
+
+"Photo Votings";"Photo Votings"
+"Video Votings";"Video Votings"
+"Music Votings";"Music Votings"
+
+"VOTE_FORM_ADMIN_LEVEL_DESCRIPTION";"These settings are applied on a per member level basis. Start by selecting the member level you want to modify, then adjust the settings for that level below."
+"Allow Viewing of Voting?";"Allow Viewing of Voting?"
+"Do you want to let members view votings? If set to no, some other settings on this page may not apply.";"Do you want to let members view votings? If set to no, some other settings on this page may not apply."
+"Yes, allow viewing of all votings, even private ones.";"Yes, allow viewing of all votings, even private ones."
+"Yes, allow viewing of votings.";"Yes, allow viewing of votings."
+"No, do not allow votings to be viewed.";"No, do not allow votings to be viewed."
+
+"Allow Creation of Votings?";"Allow Creation of Votings?"
+"Do you want to let members create votings? If set to no, some other settings on this page may not apply. This is useful if you want members to be able to view votings, but only want certain levels to be able to create votings.";"Do you want to let members create votings? If set to no, some other settings on this page may not apply. This is useful if you want members to be able to view votings, but only want certain levels to be able to create votings."
+"Yes, allow creation of votings.";"Yes, allow creation of votings."
+"No, do not allow votings to be created.";"No, do not allow votings to be created."
+"Allow Editing of Votings?";"Allow Editing of Votings?"
+"Do you want to let members edit votings? If set to no, some other settings on this page may not apply.";"Do you want to let members edit votings? If set to no, some other settings on this page may not apply."
+"Yes, allow members to edit all votings.";"Yes, allow members to edit all votings."
+"Yes, allow members to edit their own votings.";"Yes, allow members to edit their own votings."
+"No, do not allow members to edit their votings.";"No, do not allow members to edit their votings."
+
+"Allow Deletion of Votings?";"Allow Deletion of Votings?"
+"Do you want to let members delete votings? If set to no, some other settings on this page may not apply.";"Do you want to let members delete votings? If set to no, some other settings on this page may not apply."
+"Yes, allow members to delete all votings.";"Yes, allow members to delete all votings."
+"Yes, allow members to delete their own votings.";"Yes, allow members to delete their own votings."
+"No, do not allow members to delete their votings.";"No, do not allow members to delete their votings."
+
+"Allow Commenting on Votings?";"Allow Commenting on Votings?"
+"Do you want to let members of this level comment on votings?";"Do you want to let members of this level comment on votings?"
+"Yes, allow members to comment on all votings, including private votings.";"Yes, allow members to comment on all votings, including private votings."
+"Yes, allow members to comment on votings.";"Yes, allow members to comment on votings."
+"No, do not allow members to comment on votings.";"No, do not allow members to comment on votings."
+
+"Allow Participating in Votings?";"Allow Participating in Votings?"
+"Do you want to let members of this level participate in votings?";"Do you want to let members of this level participate in votings?"
+"Yes, allow members to participate in all votings, including private votings.";"Yes, allow members to participate in all votings, including private votings."
+"Yes, allow members to participate in votings.";"Yes, allow members to participate in votings."
+"No, do not allow members to participate in votings.";"No, do not allow members to participate in votings."
+
+"Allow Voting?";"Allow Voting?"
+"Do you want to let members of this level vote?";"Do you want to let members of this level vote?"
+"Yes, allow members to vote on all votings, including private votings.";"Yes, allow members to vote on all votings, including private votings."
+"Yes, allow members to vote.";"Yes, allow members to vote."
+"No, do not allow members to vote.";"No, do not allow members to vote."
+
+"Allow Voting Style";"Allow Voting Style"
+"Yes, allow members to style all votings, including private votings.";"Yes, allow members to style all votings, including private votings."
+"Yes, allow custom voting styles.";"Yes, allow custom voting styles."
+"No, do not allow custom voting styles.";"No, do not allow custom voting styles."
+
+"Voting Privacy";"Voting Privacy"
+"Your members can choose from any of the options checked below when they decide who can see their votings. These options appear on your members\' "Create Voting" and "Edit Voting" pages. If you do not check any options, everyone will be allowed to view voting.";"Your members can choose from any of the options checked below when they decide who can see their votings. These options appear on your members\' "Create Voting" and "Edit Voting" pages. If you do not check any options, everyone will be allowed to view voting."
+"Voting Comment Options";"Voting Comment Options"
+"Your members can choose from any of the options checked below when they decide who can post comments on their votings. If you do not check any options, everyone will be allowed to post comments on votings.";"Your members can choose from any of the options checked below when they decide who can post comments on their votings. If you do not check any options, everyone will be allowed to post comments on votings."
+
+"Voting Participation Options";"Voting Participation Options"
+"Your members can choose from any of the options checked below when they decide who can participate in their votings. If you do not check any options, everyone will be allowed to participate in votings.";"Your members can choose from any of the options checked below when they decide who can participate in their votings. If you do not check any options, everyone will be allowed to participate in votings."
+"Vote Options";"Vote Options"
+"Your members can choose from any of the options checked below when they decide who can vote in their votings. If you do not check any options, everyone will be allowed to vote in votings.";"Your members can choose from any of the options checked below when they decide who can vote in their votings. If you do not check any options, everyone will be allowed to vote in votings."
+"HTML in Description of Votings?";"HTML in Description of Votings?"
+"If you want to allow specific HTML tags, you can enter them below (separated by commas). Example: b, img, a, embed, font";"If you want to allow specific HTML tags, you can enter them below (separated by commas). Example: b, img, a, embed, font"
+"Maximum Allowed Votings?";"Maximum Allowed Votings?"
+"Enter the maximum number of allowed votings. The field must contain an integer between 1 and 999, or empty for unlimited.";"Enter the maximum number of allowed votings. The field must contain an integer between 1 and 999, or empty for unlimited."
+
+"VOTE_FORM_ADMIN_GLOBAL_APPROVAL_DESCRIPTION";""
+"Yes, votings need to be approved.";"Yes, votings need to be approved."
+"No, votings do not need to be approved.";"No, votings do not need to be approved."
+"Votings Per Page";"Votings Per Page"
+"How many votings will be shown per page? (Enter a number between 1 and 999)";"How many votings will be shown per page? (Enter a number between 1 and 999)"
+
+"vote_music_part_CREATE_TITLE";"Upload Music"
+"vote_music_part_CREATE_DESC";"Participate and win in voting by uploading music composition."
+"vote_music_part_Title";"Title"
+"vote_music_part_Description";"Description"
+"vote_music_part_Artwork";"Artwork"
+
+"vote_photo_part_CREATE_TITLE";"Upload Photo"
+"vote_photo_part_CREATE_DESC";"Nominate your photo and win the vote. Just upload a your best picture or photo using this form and get rated."
+"vote_photo_part_Title";"Title"
+"vote_photo_part_Description";"Description"
+"vote_part_Photo";"Photo"
+"vote_photo_part_Participate";"Participate"
+"vote_photo_part_cancel";"cancel"
+
+"vote_video_part_CREATE_TITLE";"Upload Video"
+"vote_video_part_CREATE_DESC";"Nominate your video and win the vote. Just upload a your best video or import it from Youtube or Vimeo."
+"vote_video_part_Title";"Title"
+"vote_video_part_Description";"Description"
+"vote_video_part_Participate";"Participate"
+"vote_video_part_cancel";"cancel"
+
+"Browse By";"Browse By"
+"Alphabetically";"Alphabetically"
+"Most Viewed";"Most Viewed"
+"Most Recent";"Most Recent"
+
+"Everyone's Votings";"Everyone's Votings"
+"Only My Friends' Votings";"Only My Friends' Votings"
+"All Votings";"All Votings"
+"Only Active Votings";"Only Active Votings"
+"Only Upcoming Votings";"Only Upcoming Votings"
+"Only Past Votings";"Only Past Votings"
+"Only Votings With Photos";"Only Votings With Photos"
+
+"VOTING_CREATE_TITLE";"Create Voting"
+"VOTING_CREATE_DESC";"You can create voting using this form. Voting allows to members of this community nominate their photos, videos, music in voting and also allows users to vote for those videos, photos, music."
+
+"People can search for this voting";"People can search for this voting"
+"Who may see this voting?";"Who may see this voting?"
+"Who may post comments on this voting?";"Who may post comments on this voting?"
+"Who may participate in this voting?";"Who may participate in this voting?"
+"Who may vote?";"Who may vote?"
+"Participation Privacy";"Participation Privacy"
+"Vote Privacy";"Vote Privacy"
+"Create Voting";"Create Voting"
+
+"Delete Voting";"Delete Voting"
+"Are you sure you want to delete this voting?";"Are you sure you want to delete this voting?"
+"VOTING_EDIT_TITLE";"Edit Voting Details"
+"VOTING_EDIT_DESC";""
+
+"Voting Styles";"Voting Styles"
+"Custom Voting Styles";"Custom Voting Styles"
+"You can change the colors, fonts, and styles of your voting by adding CSS code below. The contents of the text area below will be output between <style> tags on your voting.";"You can change the colors, fonts, and styles of your voting by adding CSS code below. The contents of the text area below will be output between <style> tags on your voting."
+
+"Browse Votings";"Browse Votings"
+"Edit Voting";"Edit Voting"
+"Start Voting";"Start Voting"
+"Finish Voting";"Finish Voting"
+"Edit Voting Style";"Edit Voting Style"
+"Share This Voting";"Share This Voting"
+"Delete Voting";"Delete Voting"
+
+"Voting Status";"Voting Status"
+"Displays a voting's title.";"Displays a voting's title."
+"Voting Options";"Voting Options"
+"Displays a menu of actions (edit, share, etc) that can be performed on a voting on it's profile.";"Displays a menu of actions (edit, share, etc) that can be performed on a voting on it's profile."
+"Voting Info";"Voting Info"
+"Displays a voting's info on it's profile.";"Displays a voting's info on it's profile."
+
+"Voting Participants";"Voting Participants"
+"Displays a voting's participants on it's profile.";"Displays a voting's participants on it's profile."
+"Participants";"Participants"
+
+"Cast a Vote";"Cast a Vote"
+"Displays a participants of the active votings randomly.";"Displays a participants of the active votings randomly."
+"Cast a Vote";"Cast a Vote"
+"Most Viewed Participants";"Most Viewed Participants"
+
+"Displays a voting's most viewed participants on it's profile.";"Displays a voting's most viewed participants on it's profile."
+"Most Voted Participants";"Most Voted Participants"
+"Displays a voting's most voted participants on it's profile.";"Displays a voting's most voted participants on it's profile."
+"Most Voted Participants";"Most Voted Participants"
+
+"Voting Leaders";"Voting Leaders"
+"Displays a voting leaders on it's profile.";"Displays a voting leaders on it's profile."
+"Leaders";"Leaders"
+
+"Profile Votings";"Profile Votings"
+"Votings";"Votings"
+
+"Voting Description";"Voting Description"
+"Displays voting's description on it's profile.";"Displays voting's description on it's profile."
+
+"Upcoming Votings";"Upcoming Votings"
+"Displays upcoming votings.";"Displays upcoming votings."
+"Active Votings";"Active Votings"
+"Displays active votings.";"Displays active votings."
+
+"Featured Votings";"Featured Votings"
+"Displays featured votings.";"Displays featured votings."
+"Featured Votings";"Featured Votings"
+"New Votings";"New Votings"
+
+"Voting Participation";"Voting Participation"
+"Displays a voting's participate form or participant results on it's profile.";"Displays a voting's participate form or participant results on it's profile."
+"Participation";"Participation"
+
+"Voting Photo";"Voting Photo"
+"Voting Profile";"Voting Profile"
+"This is the profile for a voting.";"This is the profile for a voting."
+
+"{item:$subject} is now participating in the voting {item:$object}";"{item:$subject} is now participating in the voting {item:$object}"
+"{item:$subject} commented on {item:$owner}''s {item:$object:voting}: {body:$body}";"{item:$subject} commented on {item:$owner}''s {item:$object:voting}: {body:$body}"
+"{item:$object} voting started";"{item:$object} voting started"
+"{item:$object} voting finished";"{item:$object} voting finished"
+"{item:$subject} created new voting {item:$object}";"{item:$subject} created new voting {item:$object}"
+
+"ADMIN_ACTIVITY_TYPE_COMMENT_VOTE_CHALLENGE";"When a user (subject) comments on another user's (object) votings."
+"ADMIN_ACTIVITY_TYPE_VOTE_CHALLENGE_FINISH";"When a user (subject) finishes the (object) voting"
+"ADMIN_ACTIVITY_TYPE_VOTE_CHALLENGE_START";"When a user (subject) starts the (object) voting"
+"ADMIN_ACTIVITY_TYPE_VOTE_CHALLENGE_NEW";"When a user (subject) creates a new (object) voting"
+"ADMIN_ACTIVITY_TYPE_VOTE_PARTICIPATED";"When a user (subject) nominate some content in (object) voting"
+
+"_ACTIVITY_ACTIONTYPE_COMMENT_VOTE_CHALLENGE";"Comments on your votings"
+"_ACTIVITY_ACTIONTYPE_VOTE_CHALLENGE_FINISH";"Voting finished"
+"_ACTIVITY_ACTIONTYPE_VOTE_CHALLENGE_NEW";"New voting created"
+"_ACTIVITY_ACTIONTYPE_VOTE_CHALLENGE_START";"Voting started"
+"_ACTIVITY_ACTIONTYPE_VOTE_PARTICIPATED";"New participant in the voting"
+
+"ACTIVITY_TYPE_VOTE_PARTICIPANT_PROCESSED";"When a participant's video has been processed."
+"ACTIVITY_TYPE_VOTE_PARTICIPANT_PROCESSED_FAILE";"When a participant's video has failed to be processed."
+
+"ITEM_TYPE_VOTE_CHALLENGE";"Votings"
+"ITEM_TYPE_VOTE_PARTICIPANT";"Voting Participants"
+
+"Voting Plugin";"Voting Plugin"
+"VOTING_VIEWS_SCRIPTS_ADMINMANAGE_INDEX_DESCRIPTION";"This page lists all of the votings your users have created. You can use this page to monitor these votings and delete offensive material if necessary. Entering criteria into the filter fields will help you find specific votings. Leaving the filter fields blank will show all the votings on your social network."
+"%s voting found";"%s voting found";"%s votings found"
+
+"There are no votings created by your members yet.";"There are no votings created by your members yet."
+"Voting Categories";"Voting Categories"
+"VOTING_VIEWS_SCRIPTS_ADMINSETTINGS_CATEGORIES_DESCRIPTION";"If you want to allow your users to categorize their votings, create the categories below. This feature is useful if you want to list all your users' votings that If you have no categories, your users will not be given the option of assigning a voting category."
+
+"Welcome to Votings of %s";"Welcome to Votings of %s"
+"Started at %s lasts to %s";"Started at %s lasts to %s"
+
+"Votes";"Votes"
+"Disqualification";"Disqualification"
+"Disqualify";"Disqualify"
+
+"Newest";"Newest"
+"Most Popular";"Most Popular"
+"Most Rated";"Most Rated"
+
+"ACTIVE";"ACTIVE"
+"FINISHED";"FINISHED"
+"UPCOMING";"UPCOMING"
+"Voting started";"Voting started"
+
+"%s Votings";"%s Votings"
+"%s Voting Participation";"%s Voting Participation"

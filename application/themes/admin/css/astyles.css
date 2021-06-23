@@ -1,0 +1,176 @@
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input,td,th{
+    margin:0;
+    padding:0;
+}
+body,html{
+    height:100%;
+    margin:0;
+    padding:0;
+}
+img{
+    border:0;
+}
+
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:700;
+    font-style:italic;
+    font-size:17px;
+    color:#000209;
+    margin:0 0 10px 0;
+}
+h2{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:700;
+    font-style:italic;
+    font-size:13px;
+    color:#CC0000;
+    margin-bottom:5px;
+}
+body,td,th,p,div{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    color:#000;
+}
+p{
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:13px;
+    color:#080808;
+    margin:0 0 10px 0;
+    line-height:1.4;
+}
+/******************************************/
+
+
+
+.text {
+	font-family: arial;
+	font-size:12px;
+	color:#000000;
+}
+.text2 {
+	font-family: arial;
+	font-size:x-small;
+	color:#000000;
+}
+.link {
+	font-family: arial;
+	font-size:12px;
+	color:#000000;
+	text-decoration:underline;
+}
+.linka {
+	font-family: arial;
+	font-size:12px;
+	color:#000000;
+	font-weight: bold;
+	text-decoration:underline;
+}
+
+.link2,.link3 {
+	font-family: arial;
+	font-size:12px;
+	color:#444444;
+	text-decoration:none;
+}
+.message {
+	font-family: Tahoma, Arial, Verdana; 
+	font-size: 11px;
+	font-weight: bold;
+	color: #d35d39;
+	text-decoration:none;
+}
+.help {
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 10px;
+	color: #888888;
+	font-weight:normal;
+	font-style:italic;
+}
+/***************************************************************************************/
+.button {
+	height: 20px;
+	font-family: arial;
+	font-size: x-small;
+	color: #000000;
+	border-width:1px;
+	border-style: solid;
+}
+.textinput {
+	font-family: arial;
+	font-size: 12px;
+	color: #000000;
+	background-color: #ffffff;
+	height:18px;
+	padding: 0px;
+	margin: 0px;
+}
+.textareainput {
+	font-family: arial;
+	font-size: 12px;
+	color: #000000;
+	background-color: #ffffff;
+	padding: 0px;
+	margin: 0px;
+	border-width:1px;
+	border-style: solid;
+}
+.f_select {
+	font-family: arial;
+	font-size: 11px;
+	color: #000000;
+	padding: 0px;
+	margin: 0px;
+}
+
+div.preview {display:none;position:absolute;margin:-5 0 0 50px;border:1px solid #1493bc;background-color:#FFF;}
+
+input.reset {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:700;
+    font-size:13px;
+    border:1px solid #999999;
+    margin:5px;
+    padding:5px;
+    background-color:#BBD5FF;
+    cursor:pointer;
+}
+/* */
+
+/* */
+table.adminedit{
+background-color: #FFFFFF;
+margin:10px 0 0 0;
+padding: 0px;
+border: 1px solid #ddd;
+border-spacing: 0px;
+border-collapse: collapse;
+}
+table.adminedit input, table.adminedit select, table.adminedit textarea{
+    width:700px;
+    height:20px;
+    padding:3px 3px;
+    border:1px solid #999;
+}
+table.adminedit input, table.adminedit select, table.adminedit textarea {
+    cursor:pointer;
+}
+table.adminedit textarea {
+    height:140px;
+}
+table.adminedit input.checkbox {
+    width:auto;
+    height:auto;
+    font-size:auto;
+    padding:0;
+    border:0;
+}
+table.adminedit input.file {
+    width:auto;
+    height:auto;
+    font-size:auto;
+}
+
+table.adminedit textarea{height:120;}
+table.adminedit td,table.adminedit th{border: 1px solid #e5e5e5;padding:4px;}
+table.adminedit a,table.adminedit a:visited{text-decoration:none;}

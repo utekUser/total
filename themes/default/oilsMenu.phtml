@@ -1,0 +1,85 @@
+<?php if ($_SERVER['REMOTE_ADDR'] == '78.139.228.23') { ?>
+<form method="get">
+    <div class="search-menu">
+
+        <?php foreach ($this->filters as $filterKey => $filter) { ?>
+        <div class="search-menu__filter">
+            <div class="search-menu__title"><?php echo $filter['name']; ?></div>
+            <?php switch ($filter['type']) {
+                case 'checkbox':
+                    echo '<ul>';
+                    foreach ($filter['values'] as $key => $value) {
+                        if (isset($_GET['filters'][$filterKey])) {
+                            $checked = '';
+                            foreach ($_GET['filters'][$filterKey] as $getBrand) {
+                                if ($getBrand == $value) {
+                                    $checked = 'checked';
+                                    break;
+                                }
+                            }
+                        }
+                        echo '<li>
+                            <label>
+                                <input type="checkbox" name="filters[' . $filterKey . '][]" value="' . $key . '" ' . $checked . '>
+                                ' . $value . '
+                            </label>
+                        </li>';
+                    }
+                    echo '</ul>';
+                    break;
+                case 'range':
+                    echo '
+                    от
+                    <input type="text" size="5" name="filters[' . $filterKey . '][' . $filter['from'] . ']" value="' . (isset($_GET['filters'][$filterKey][$filter['from']]) ? $_GET['filters'][$filterKey][$filter['from']] : '') . '">
+                    до
+                    <input type="text" size="5" name="filters[' . $filterKey . '][' . $filter['to'] . ']" value="' . (isset($_GET['filters'][$filterKey][$filter['to']]) ? $_GET['filters'][$filterKey][$filter['to']] : '') . '">
+                    ' . $filter['value'] . '
+                    ';
+                    break;
+            } ?>
+        </div>
+        <?php } ?>
+
+        <div class="search-menu__button">
+            <button type="submit">Показать товары</button>
+        </div>
+    </div>
+</form>
+
+<?php if (false && Engine_Cms::displayContent(1)) { ?>
+<div class="contacts">
+    <div class="white-block">
+        <div class="title">Контакты</div>
+        <div class="contacts-info">
+            <p>
+                <span style="color: #000000;"><strong><span style="font-size: small;">г.Томск</span><br>
+                        <span style="font-size: small;">ул.Тверская, 18</span>
+                            <div class="white-block">
+                                <a href="http://total.tomsk.ru/kontakty-i-shema-proezda-kompanii-tomavtotrejd-/" rel="nofollow">Схема проезда</a>
+                            </div>
+                        <br></strong></span>
+                <span style="font-size: small; color: #000000;">
+                </span>
+            </p>
+            <p><span style="font-size: small; color: #000000;"><span style="font-size: small; color: #000000;"><span style="color: #000000;"> <strong>тел.:<br></strong></span><span style="font-size: small; color: #000000;"><span style="font-size: small; color: #000000;"><span style="font-size: small; color: #000000;">Оптовый отдел</span></span><strong><span style="font-size: small; color: #000000;"><strong><span style="font-size: small; color: #000000;"><strong><br></strong></span></strong></span></strong><span style="font-size: small; color: #000000;"><span style="font-size: small; color: #000000;"><span style="font-size: small; color: #000000;">(382 2)&nbsp;<strong>266-933</strong></span></span></span><strong><span style="font-size: small; color: #000000;"><strong><span style="font-size: small; color: #000000;"><strong><br></strong></span></strong></span></strong><span style="font-size: small; color: #000000;"><span style="font-size: small; color: #000000;"><span style="font-size: small; color: #000000;"> <span style="font-size: small; color: #000000;">(382 2)</span> <strong>266-866</strong></span></span></span></span></span></span></p>
+            <p><span style="font-size: small; color: #000000;"><span style="font-size: small; color: #000000;"><span style="font-size: small; color: #000000;"><strong></strong><span style="font-size: small; color: #000000;"><span style="font-size: small; color: #000000;">Розница</span></span><strong><span style="font-size: small; color: #000000;"><strong> 266-687</strong></span></strong></span></span><strong><span style="font-size: small; color: #000000;"><strong><span style="font-size: small; color: #000000;"><strong><br></strong></span></strong></span></strong></span></p>
+            <a href="mailto:avr@mail.tomsknet.ru" class="mail">avr@mail.tomsknet.ru</a></div>
+    </div>
+</div>
+<?php } ?>
+
+
+
+
+<?php } ?>
+
+<?php if (false) { ?>
+<div class="catalog-oils">
+    <div class="white-block-t"></div>
+    <div class="white-block">
+        <div class="catalog-title">Каталог продукции</div>
+    </div>
+<?php echo $this->oilsTree; ?>
+   
+</div>
+<?php } ?>

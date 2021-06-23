@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/* Reset CSS */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+em {
+    font-style:italic;
+}
+ol, ul {
+	
+}
+caption,th {
+	text-align:center;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { 
+	border:0;
+}
+
+/* */
+p {
+    margin:10px 0 7px 0;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+img.floatleft {
+    float:left;
+    margin:0 20px 0 0;
+}
+img.floatright {
+    float:right;
+    margin:0 0 0 10px;
+}
+
+ul {
+    color: #444444;
+    list-style: square outside none;
+}
+ul li {
+    margin: 5px 0 0 35px;
+}
+ul li li {
+    margin: 5px 0 0 35px;
+}
+ul li li li {
+    margin: 5px 0 5px 35px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 1px;
+    margin: 0 0 10px;
+}
+th {
+    background: none repeat scroll 0 0 #DDDDDD;
+    border: medium none;
+    color: #333333;
+    font-family: Arial,Verdana,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+}
+td {
+    background: none repeat scroll 0 0 #EBEBEB;
+    border: medium none;
+    margin: 0;
+}
+th, td {
+    padding: 8px 18px;
+}
+.arcticmodal-container_i td {
+    background: none;
+}

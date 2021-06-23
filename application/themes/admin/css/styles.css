@@ -1,0 +1,101 @@
+/* ��������� �� ������� */
+.message {
+    background-color:#D1674A;
+    color:#ffffff;
+    font-size:14px;
+    margin:0 0 10px 0;
+    padding:3px;
+}
+.header {
+    background-color:#0D60AE;
+    font-size:14px;
+    font-weight:700;
+    padding:5px;
+    color:#ffffff;
+}
+
+/* ������� */
+.adminlist a, .adminlist a:visited{color:#148fc7;text-decoration:underline;}
+.adminlist a:hover{text-decoration:none;}
+
+.adminlist {
+	background-color: #FFFFFF;
+	margin:20px 0 0 0;
+	padding: 0px;
+	border: 1px solid #ddd;
+	border-spacing: 0px;
+	width: auto;
+	border-collapse: collapse;
+}
+.adminlist a, .adminlist a:visited{text-decoration:none;}
+.adminlist input{border:none;}
+.adminlist th {
+	margin: 0px;
+	font-size: 11px;
+	padding:4px 16px;
+	height: 25px;
+	background: url(../i/cms/background.jpg);
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #c7c7c7;
+	color: #000;
+	border-right:1px solid #fff;
+	text-align:center;
+}
+.adminlist td {
+    padding:4px 16px;
+	font-size: 11px;
+	border-right:1px solid #c7c7c7;
+	width: auto;
+}
+.adminlist th.title {text-align: left;}
+.adminlist th a:link, .adminlist th a:visited {color: #c64934;text-decoration: none;}
+.adminlist th a:hover {text-decoration: underline;}
+.adminlist tr.row0 {background-color: #F9F9F9;}
+.adminlist tr.row1 {background-color: #FFF;}
+.adminlist td {
+    border-bottom: 1px solid #e5e5e5;
+    padding:4px 16px;
+}
+.adminlist tr.row0:hover {background-color: #f1f1f1;}
+.adminlist tr.row1:hover {background-color: #f1f1f1;}
+.adminlist td.options {background-color: #ffffff;font-size: 8px;}
+.adminlist div.preview {display:none;position:absolute;margin:-5 0 0 25;border:3px solid #1493bc;background-color:#FFF;}
+
+/* */
+table.adminedit{
+background-color: #FFFFFF;
+margin:10px 0 0 0;
+padding: 0px;
+border: 1px solid #ddd;
+border-spacing: 0px;
+border-collapse: collapse;
+}
+table.adminedit input, table.adminedit select, table.adminedit textarea{
+    width:700px;
+    height:20px;
+    padding:3px 3px;
+    border:1px solid #999;
+}
+table.adminedit input, table.adminedit select, table.adminedit textarea {
+    cursor:pointer;
+}
+table.adminedit textarea {
+    height:140px;
+}
+table.adminedit input.checkbox {
+    width:auto;
+    height:auto;
+    font-size:auto;
+    padding:0;
+    border:0;
+}
+table.adminedit input.file {
+    width:auto;
+    height:auto;
+    font-size:auto;
+}
+
+table.adminedit textarea{height:120;}
+table.adminedit td,table.adminedit th{border: 1px solid #e5e5e5;padding:4px;}
+table.adminedit a,table.adminedit a:visited{text-decoration:none;}

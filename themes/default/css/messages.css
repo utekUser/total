@@ -1,0 +1,99 @@
+.control-mmenu {
+    overflow:hidden;
+}
+.control-mmessages {
+    display:block;
+    float:left;
+    font-size:16px;
+    font-weight:700;
+    margin:0 30px 0 0;
+    padding:4px 0;
+}
+.control-mmenu a, .control-mmenu span {
+    display:block;
+    float:left;
+    margin:0 20px 0 0;
+    border:1px solid #ccc;
+    padding:5px 15px;
+    background:#f4f4f4;
+    text-decoration:none;
+}
+.control-mmenu a:hover {
+    background:#CCCCCC;
+}
+.control-mmenu span {
+    font-weight:700;
+}
+.messages-new {
+    margin:20px 0 15px 0;
+}
+.messages-block {
+    margin:10px 0 0 0;
+}
+.messages-m {
+    border:1px solid #D8DFEA;
+    margin:5px 0 0 0;
+    padding:10px;
+}
+.unread {
+    background:#f4f4f4;
+}
+.messages-timestamp {
+    font-size:11px;
+    color:#999;
+}
+.messages-conversation {
+     color: #555555;
+     font-size:11px;
+}
+.message-b {
+    margin:20px 0 0 0;
+}
+.messages-ch {
+    margin:10px 0 0 0;
+}
+.messages-ch span {
+        
+}
+.messages-ch span:hover {
+    color:#0066FF;
+    text-decoration:underline;       
+}
+
+.rform, .rform-first {
+    border-top: 1px dashed #DDDDDD;
+    margin: 10px 0 0;
+    overflow: hidden;
+    padding: 10px 0 0;
+}
+.rform-input-full {
+    float: left;
+    width: 73%;
+}
+.inputbutton {
+    border: 1px solid #DDDDDD;
+    color: #0066FF;
+    cursor: pointer;
+    font-family: Arial,Verdana,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin:0 0 10px 0;
+    padding: 5px 10px;
+}
+.rform-input-full textarea {
+    height: 160px;
+    width: 97%;
+}
+table.msg{
+    border-collapse: collapse;
+}
+table.msg td{
+    background: none;
+    border: 1px solid #eee;
+}
+.message-text{
+    padding: 5px;
+}
+.mes-unread{
+    background: #eee;
+}

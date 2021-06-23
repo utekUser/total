@@ -1,0 +1,23 @@
+.fl_l { float: left; }
+#bad_browser {
+  border-bottom: 1px solid #B8C7D3;
+  background-color: #F2F4FF;
+}
+#bad_browser .info {
+  padding: 8px;
+  text-align: center;
+  line-height: 150%;
+}
+#bad_browser #good_browsers {
+  display: none;
+}
+#bad_browser #good_browsers div {
+  width: 400px;
+  height: 100px;
+  margin: 10px auto 0px;
+}
+#bad_browser #good_browsers a {
+  width: 100px;
+  height: 20px;
+  padding-top: 80px;
+}

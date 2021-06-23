@@ -1,0 +1,159 @@
+.jcarousel-skin-tango .jcarousel-direction-rtl {
+    direction: rtl;
+}
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: 791px;
+    padding: 0;
+    margin: 0 auto;
+}
+.jcarousel-skin-tango .jcarousel-clip {
+    overflow: hidden;
+}
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:  100%;
+    height: 100%;
+}
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 150px;
+    right: 5px;
+    width: 27px;
+    height: 51px;
+    cursor: pointer;
+    background: transparent url(/themes/default/images/next.png) no-repeat 0 0;
+}
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(/themes/default/images/prev.png);
+}
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-horizontal:focus {
+    background-position: -27px 0;
+}
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 150px;
+    left: 5px;
+    width: 27px;
+    height: 51px;
+    cursor: pointer;
+    background: transparent url(/themes/default/images/prev.png) no-repeat 0 0;
+}
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(/themes/default/images/next.png);
+}
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover, 
+.jcarousel-skin-tango .jcarousel-prev-horizontal:focus {
+    background-position: -27px 0;
+}
+.jcarousel-control{
+    margin: 0 0 5px 0;
+}
+.jcarousel-control div{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100px;
+}
+.jcarousel-control a{
+    width: 21px;
+    height: 22px;
+    display: block;
+    float: left;
+    font-size: 0;
+    background: url(/themes/default/images/scroller.png) no-repeat 0 0;
+}
+.jcarousel-control a:hover {
+    background-position: 0 -22px;
+}
+.jcarousel-control a.control-active{
+    background-position: 0 -44px;
+}
+
+.jcarousel-skin-alena .jcarousel-direction-rtl {
+    direction: rtl;
+}
+.jcarousel-skin-alena .jcarousel-container-horizontal {
+    width: 940px;
+    padding: 0;
+    margin: 0;
+}
+/*.jcarousel-skin-alena  .jcarousel-item-horizontal div a img {
+    background: url(/themes/default/images/newdesign/bg.png) no-repeat 0 0;
+}*/
+.jcarousel-skin-alena .jcarousel-clip {
+    overflow: hidden;
+}
+.jcarousel-skin-alena .jcarousel-clip-horizontal {
+    width:  100%;
+    height: 100%;
+}
+.jcarousel-skin-alena .jcarousel-next-horizontal {
+    position: absolute;
+    bottom: 25px;
+    right: 15px;
+    width: 12px;
+    height: 19px;
+    cursor: pointer;
+    background: transparent url(/themes/default/images/newdesign/lar.png) no-repeat 0 0;
+    z-index: 10;
+}
+.jcarousel-skin-alena .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(/themes/default/images/newdesign/rar.png);
+}
+.jcarousel-skin-alena .jcarousel-next-horizontal:hover,
+.jcarousel-skin-alena .jcarousel-next-horizontal:focus {
+    background-image: url(/themes/default/images/newdesign/lara.png);
+}
+.jcarousel-skin-alena .jcarousel-prev-horizontal {
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+    width: 12px;
+    height: 19px;
+    cursor: pointer;
+    background: transparent url(/themes/default/images/newdesign/rar.png) no-repeat 0 0;
+    z-index: 10;
+}
+.jcarousel-skin-alena .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(/themes/default/images/newdesign/lar.png);
+}
+.jcarousel-skin-alena .jcarousel-prev-horizontal:hover, 
+.jcarousel-skin-alena .jcarousel-prev-horizontal:focus {
+    background-image: url(/themes/default/images/newdesign/rara.png);
+}
+.jcarousel-skin-alena .jcarousel-item {
+    margin: 0;
+}
+#banners-scrollerDesing .jcarousel-control{
+    margin: 0;
+    margin-top: -83px;
+    position: relative;   
+    background: url(/themes/default/images/newdesign/bg.png) no-repeat 0 0;
+    height: 80px;
+    z-index: 1;
+}
+#banners-scrollerDesing .jcarousel-control div{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 85px;/*80px;    */
+    padding-top: 50px;
+}
+#banners-scrollerDesing .jcarousel-control a{
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    font-size: 0;
+    background: url(/themes/default/images/newdesign/sl.png) no-repeat 0 0;
+}
+#banners-scrollerDesing .jcarousel-control a:hover,
+#banners-scrollerDesing .jcarousel-control a.control-active {
+    background: url(/themes/default/images/newdesign/slactive.png) no-repeat 0 0;
+}

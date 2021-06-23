@@ -1,0 +1,140 @@
+/* Top right menu */
+.rmenu-tl {
+    background:url(/application/themes/admin/images/rmenu-tl.png) 0 0 no-repeat;
+}
+.rmenu-tr {
+    background:url(/application/themes/admin/images/rmenu-tr.png) 100% 0 no-repeat;
+}
+.rmenu-bl {
+    background:url(/application/themes/admin/images/rmenu-bl.png) 0 100% no-repeat;
+}
+.rmenu-br {
+    background:url(/application/themes/admin/images/rmenu-br.png) 100% 100% no-repeat;
+}
+.rmenu-tc {
+    background:url(/application/themes/admin/images/rmenu-tc.png) 0 0 repeat-x;
+    margin:0 4px;
+}
+.rmenu-bc {
+    background:url(/application/themes/admin/images/rmenu-bc.png) 0 100% repeat-x;
+    padding:4px 0;
+}
+.rmenu-ml {
+    background:url(/application/themes/admin/images/rmenu-ml.png) 0 0 repeat-y;
+    margin:0 -4px;
+}
+.rmenu-mr {
+    background:url(/application/themes/admin/images/rmenu-mr.png) 100% 0 repeat-y;
+    padding:0 4px;
+}
+.rmenu-i {
+    background:#ffffe0;
+    padding: 0 15px 3px 15px;
+    overflow:hidden;
+}
+.rmenu-i a, .rmenu-i a.first {
+    float:left;
+    display:block;
+    height:18px;
+    padding:0 0 0 10px;
+    margin:0 0 0 10px;
+    background:url(/application/themes/admin/images/menu-r.png) 0 center no-repeat;
+    text-decoration:none;
+    color:#555555;
+}
+.rmenu-i a.first {
+    background:none;
+    margin:0;
+    padding:0;
+}
+.rmenu-i a:hover {
+    text-decoration:underline;
+}
+
+
+
+/* Left vertical menu*/
+
+
+#lmenu{
+	float:left;
+	width:180px;
+	margin: 15px 0 0 0;
+}
+.lmenu-tl {
+	background: url("/application/themes/admin/images/lmenu-tl.png") top repeat-x;
+}
+.lmenu-tr{
+	background: url("/application/themes/admin/images/lmenu-tr.png") right top no-repeat;
+    margin: 0 -5px 0 0;
+}
+.lmenu-bl{
+	background: url("/application/themes/admin/images/lmenu-bl.png") bottom repeat-x;
+    margin: 0 5px 0 0;
+}
+.lmenu-br{
+	background: url("/application/themes/admin/images/lmenu-br.png") right bottom no-repeat;
+    margin: 0 -5px 0 0;
+}
+.lmenu-ul{
+	padding: 5px 0 5px 0;
+}
+#lmenu ul{
+	background: #ededed url("/application/themes/admin/images/lmenu-ul.png") right center repeat-y; margin-bottom: 0;
+}
+#lmenu ul li{
+    padding: 3px 0 3px 15px;
+}
+#lmenu ul li.lmenu-li-a{
+	background: url("/application/themes/admin/images/lmenu-li-a.png") right center no-repeat;
+}
+#lmenu ul li.razd{
+    background: url("/application/themes/admin/images/lmenu-razd.png") center center no-repeat;
+    font-size: 0;
+    height: 5px;
+}
+#lmenu ul a{
+	text-decoration: none;
+	color: #000;
+}
+#lmenu li.lmenu-li-a a{
+	color: #336699;
+	font-weight: bold;
+}
+
+
+/* Path above main table */
+
+.path-l{
+	width: 100%;
+	height: 65px;
+	border: 0px solid black;
+	margin: 0 0 15px 0;
+	background: url("/application/themes/admin/images/path-l.png") left top no-repeat;
+}
+.path-r{
+	background: url("/application/themes/admin/images/path-r.png") right top no-repeat;
+	height: 100%;
+}
+.path-m{
+	background: url("/application/themes/admin/images/path-m.png") center top repeat-x;
+	height: 100%;
+	margin: 0 10px 0 13px;
+}
+.path{
+	color: #555;
+	padding: 10px 0 0 15px;
+}
+.path a{
+	color: #555;
+	text-decoration: none;
+}
+.module-name{
+	padding: 8px 0 0 15px;
+}
+.module-name, .module-name a{
+	color:#336699;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+}

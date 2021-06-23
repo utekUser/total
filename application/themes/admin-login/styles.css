@@ -1,0 +1,155 @@
+/* */
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #f9f9f9;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+a{
+	color: #369;
+}
+image {
+	border: 0;
+}
+#top{
+	height: 32px;
+	background: url(/application/themes/admin-login/images-main/top.png) bottom center repeat-x;
+	padding: 10px 0 0 15px;
+}
+#top a{
+	color: #555;
+	font-size: 11px;
+	text-decoration: none;
+	background: url(/application/themes/admin-login/images-main/arrow.png) center left no-repeat;
+	padding: 0 0 0 15px;
+}
+#wrapper{
+	width: 330px;
+	margin: 100px auto 0 auto;
+
+}
+#wrapper .logo{
+	text-align: center;
+	margin: 0 0 15px 0;
+}
+
+/** ERROR BLOCK **/
+.error-t {
+    background: url(/application/themes/admin-login/images-main/error-t.png) center top no-repeat;
+    height: 5px;
+}
+.error-m {
+    background: url(/application/themes/admin-login/images-main/error-m.png) center top repeat-y;
+	padding: 10px 20px;
+	font-size:11px;
+}
+.error-b {
+    background: url(/application/themes/admin-login/images-main/error-b.png) center top no-repeat;
+    height: 6px;
+}
+
+/** INFO BLOCK **/
+.info-t{
+	height: 5px;
+	background: url(/application/themes/admin-login/images-main/info-t.png) center top no-repeat;
+}
+.info-m{
+	background: url(/application/themes/admin-login/images-main/info-m.png) center top repeat-y;
+	color: #333;
+	padding: 10px 20px;
+	font-size:11px;
+}
+.info-b{
+	height: 6px;
+	background: url(/application/themes/admin-login/images-main/info-b.png) center top no-repeat;
+}
+
+/** WHITE BLOCK **/
+.form-t{
+	height: 18px;
+	background: url(/application/themes/admin-login/images-main/form-t.png) center top no-repeat;
+}
+.form-m{
+	background: url(/application/themes/admin-login/images-main/form-m.png) center top repeat-y;
+	color: #555;
+	padding: 0 20px;
+	font-size:12px;
+}
+.form-b{
+	height: 16px;
+	background: url(/application/themes/admin-login/images-main/form-b.png) center top no-repeat;
+}
+
+/** FORM **/
+form {	
+	margin-left: 5px;
+	padding: 10px 16px 40px 0;
+}
+input{
+	color: #555;
+}
+form .input {
+	background: #FBFBFB;
+	border: 1px solid #E5E5E5;
+	font-size: 24px;
+	margin: 2px 6px 16px 0;
+	padding: 3px;
+	width: 97%;
+}
+form p {
+	margin: 0;
+}
+form .forgetmenot {
+	float: left;
+	margin-bottom: 0;
+}
+.button-primary {
+	border: 1px solid #258;
+	cursor: pointer;
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: -3px;
+	padding: 3px 10px;
+	text-decoration: none;
+	background: #369;
+	color: #fff;
+}
+#login form p {
+	margin-bottom: 0;
+}
+label {
+	color: #555;
+	font-size: 12px;
+}
+form .forgetmenot label {
+	font-size: 11px;
+	line-height: 19px;
+}
+form .submit, .alignright {
+	float: right;
+}
+#nav{
+	margin: 5px 0 0 25px;
+}
+#nav a {
+    color: #336699;
+	font-size: 11px;
+	text-decoration: none;
+}
+p.rank{
+	background: #ff9a9a;
+	border: 1px solid #f22;
+	text-align: center;
+	padding: 6px 0;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+p.hint {
+	font-size: 11px;
+	margin: 0 0 10px 0;
+}

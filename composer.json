@@ -1,0 +1,13 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:albrin/engine.git"
+        }
+    ],
+    "require": {
+        "zendframework/zendframework1": "1.12.*@dev",
+        "mpdf/mpdf": "v5.5.1",
+        "webtomsk/Engine": "dev-master"
+    }
+}

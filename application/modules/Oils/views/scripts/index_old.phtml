@@ -1,0 +1,616 @@
+<?php /* if (false) { */if ($_SERVER['REMOTE_ADDR'] == '78.140.9.206' || $_SERVER['REMOTE_ADDR'] == '46.161.158.155' || $_SERVER['REMOTE_ADDR'] == '88.204.72.104' || $_SERVER['REMOTE_ADDR'] == '95.170.159.81') { ?>
+    <div class="search-blockN">
+        <div style="font-size:11px; color:#999; float: right; text-align:right; margin: 10px 5px 0 0;">
+            Последнее обновление прайса: <?php echo $this->Date(date('Y-m-d H:i:s', $this->task), 'datetimesign'); ?>
+        </div>
+        <div class="grey-corner-mN">
+            <div class="search-form" style="width: 450px;">
+                <form action="/oils/" method="get" style="width: 450px; overflow: auto;">
+                    <div class="search-form-labelN">Быстрый поиск</div>
+                    <div class="search-form-field input-fieldN search-form-buttonN" style="width: 450px;">
+                        <input style="float: left;" type="text" name="oil" value="<?php echo $this->oil; ?>" /><button style="float: left;" type="submit" />
+                    </div>
+                    <?php /* <div class="search-form-buttonN">
+                        <button type="submit" />
+                    </div> */ ?>
+                </form>
+            </div>
+            <div class="filter-mannN">
+                <a href="http://total-dnk.lubricantadvisor.com/default.aspx?lang=eng&br=total" rel="nofollow" title="Online сервис по подбору масел по марке автомобиля" target="_blank">
+                    Online сервис по подбору масел Elf, Total по марке автомобиля
+                </a>
+                <div>
+                    <p class="search-blockNP">Наши менеджеры готовы вам помочь в подборе автомасел по телефонам:<br> 
+                        (3822) 266-933, 266-866 (оптовый отдел), 266-687 (розница).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php if (!sizeof($this->paginator)) { ?>
+        <p>Ничего не найдено.</p>
+
+        <?php
+        if (isset($_GET['oil'])) {
+            $searchRequest = htmlspecialchars($_GET['oil']);
+        }
+        $category = ' (категория: автомасла)';
+        ?>
+        <div class="desired">
+            <h1>Желаемый продукт</h1>
+            <p>Товар с вхождением <strong>«<?php echo $searchRequest; ?>»</strong> — не найден. Возможно сейчас его нет в наличии на складе.</p>
+            <p>Вы можете добавить его в заказ в раздел «Желаемая продукция» — наши менеджеры свяжутся с Вами, подтвердят возможность выполнения заказа и сообщат о возможных сроках доставки.</p>
+            <form class="desired-ajax-form" action="/catalog/desired/">
+                <button type="submit" class="btn btn-success">Добавить</button>
+                <div class="desired-ajax-form__input"><input name="name" type="text" class=""form-control placeholder="Наименование товара"<?php
+                    if (isset($searchRequest)) {
+                        echo 'value="' . $searchRequest . $category . '"';
+                    }
+                    ?>></div>
+            </form>
+            <div id="desiredtable">
+                <table style="width: 100%">
+                    <thead>
+                        <tr>
+                            <td style="font-weight: 700">Наименование желаемого товара для заказа</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </thead>
+                    <?php foreach ($this->desired as $product) { ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($product['name']); ?></td>
+                            <td style="width: 50px; text-align: right"><a id="desired<?php echo $product['id']; ?>" style="margin: 25px 0px 0 0;" href="/delete/">Удалить</a></td>
+                        </tr>
+                    <?php } ?>
+                </table>
+            </div>
+        </div>
+    <?php } else { ?>
+        <input type="hidden" id="catalog-type" value="oil" />
+        <div class="oiltableN">
+            <style>
+                th, td {
+                    padding: 8px;
+                }
+                a.delete-item {
+                    display: block;
+                    width: 85px;
+                    height: 31px;
+                    background: url(/themes/default/images/newdesign/delete.png) no-repeat 0 0;
+                    font-size: 0;
+                    margin: 0 auto;
+                }
+                a.delete-item:hover {
+                    background-position: 0 0;
+                }
+                a.add-to-bask {
+                    display: block;
+                    width: 96px;
+                    height: 31px;
+                    background: url(/themes/default/images/newdesign/tobasket.png) no-repeat 0 0;
+                    font-size: 0;
+                    margin: 0 auto;
+                }
+                a.add-to-bask:hover {
+                    background: url(/themes/default/images/newdesign/tobasketh.png) no-repeat 0 0;
+                }
+                a.add-more {
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    font-size: 0;
+                    float: left;
+                    background: url(/themes/default/images/newdesign/plus.png) no-repeat 0 0;
+                    margin: 0 3px;
+                }
+                a.add-more:hover {
+                    background: url(/themes/default/images/newdesign/plush.png) no-repeat 0 0;
+                    background-position: 0 0;
+                }
+                a.add-less {
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    font-size: 0;
+                    float: left;
+                    background: url(/themes/default/images/newdesign/minus.png) no-repeat 0 0;
+                    margin: 0 3px;
+                }
+                a.add-less:hover { 
+                    background: url(/themes/default/images/newdesign/minush.png) no-repeat 0 0;
+                    background-position: 0px 0px;
+                }
+                div.input-field, div.input-field div, div.input-field div div {
+                    padding: 0;
+                    background: none;
+                }
+                .input-field div div input {
+                    width: 40px;
+                    padding: 0;
+                    text-align: center;
+                    background-color: #f8f8f8;
+                    border: #cfcfcf 1px solid;
+                    border-radius: 0px;
+                    margin: 0px 0 0 0;
+                    height: 18px;
+                    line-height: 18px;
+                }
+            </style>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Фото</th>
+                        <th width="130">Наименование</th>
+                        <th>Наличие</th>
+                        <th style="width: 150px;">Цена за (1 шт.)</th>
+                        <th style="background: url(/themes/default/images/newdesign/baggray2.png) 7px 6px no-repeat">Количество</th>
+                        <?php /* <th>Количество</th> */ ?>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($this->paginator as $oil) { ?>
+                        <?php
+                        // Для юридического лица.
+                        // 1) Если есть рекомендуемая цена - выводится она.
+                        // 2) Если нету рекомендуемой цены, но при этом товар есть в наличии и указана базовая цена - выводиться базовая цена.
+                        // Если нету ни 1), ни 2) - ничего не выводится 
+                        if ($this->priceType == 'recom') {
+                            if ($oil['price_rec'] != 0) {
+                                $price = $oil['price_rec'];
+                            } else {
+                                $price = $oil['price_base'];
+                            }
+                            // Для физ. лиц
+                            // Всегда выводится базовая цена вне зависимости от наличия
+                        } elseif ($this->priceType == 'base') {
+                            $price = $oil['price_base'];
+                        }
+                        ?>
+                        <?php if ($price != 'noshow') { ?>
+                            <tr>
+                                <td>
+                                    <a href="/oils/<?php echo $oil['id']; ?>.html">
+                                        <?php if ($oil['picture'] != '') { ?>
+                                            <img style="width: 50px; height: 60px;" alt="" src="/<?php echo $oil['picture']; ?>p.jpg"/>
+                                        <?php } else { ?>
+                                            <img style="width: 50px; height: 60px;" alt="" src="/themes/default/images/catalog-item.png"/>
+                                        <?php } ?>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a class="oilTitle" href="/oils/<?php echo $oil['id']; ?>.html">
+                                        <?php echo $oil['invoice_name']; ?>
+                                    </a>
+                                </td>
+                                <td>
+                                    <p class="oilText">
+                                        <?php echo number_format($oil['env'], 0, ' ', ' '); ?><span> шт.</span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="oilText">
+                                        <?php echo number_format($price, 0, ' ', ' '); ?><span> руб.</span>
+                                    </p>
+                                </td>
+                                <?php /* <td></td> */ ?>
+                                <td width="130" class="item-amount">
+                                    <a class="add-less" href="javascript:{}">Меньше</a>
+                                    <?php if (isset($_SESSION['basket']['oil'][$oil['id']])) { ?>
+                                        <?php $value = $_SESSION['basket']['oil'][$oil['id']]; ?>
+                                        <div class="input-field"><div><div><input type="text" name="price" id="<?php echo $oil['id']; ?>" value="<?php echo $value; ?>" onchange="changeAmount(this, 'oil', <?php echo $oil['id']; ?>);" /></div></div></div>
+                                    <?php } else { ?>
+                                        <div class="input-field"><div><div><input type="text" name="price" id="<?php echo $oil['id']; ?>" value="1" /></div></div></div>
+                                    <?php } ?>
+                                    <a class="add-more" href="javascript:{}">Больше</a>
+                                </td>
+                                <td class="item-action">
+                                    <?php if ($this->auth_id) { ?>
+                                        <?php if (isset($_SESSION['basket']['oil'][$oil['id']])) { ?>
+                                            <a class="delete-item" href="javascript:{};" onclick="deleteItem(this, 'oil', <?php echo $oil['id']; ?>);">Удалить</a>
+                                        <?php } else { ?>
+                                            <a class="add-to-bask" href="javascript:{};" onclick="addItem(this, 'oil', <?php echo $oil['id']; ?>);">В корзину</a>
+                                        <?php } ?>
+                                    <?php } else { ?>
+                                        <a class="add-to-bask" href="javascript:{};" onclick="regCart();">В корзину</a>
+                                    <?php } ?>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+        <!-- pager -->
+        <?php
+        $searchParam = "&";
+        foreach ($_GET['filters'] as $key => $value) {
+            foreach ($value as $key1 => $value1) {
+                if ($key == "brands" || $key == "viscosity" || $key == "type") {
+                    $searchParam .= "filters[" . $key . "][]=" . $value1 . "&";
+                } else {
+                    $searchParam .= "filters[" . $key . "][" . $key1 . "]=" . $value1 . "&";
+                }
+            }
+        }
+        ?>
+        <script>
+            $(document).ready(function () {
+                var prev = $("div.pager a.prev").attr('href');
+                $("div.pager a.prev").attr('href', prev + <?php echo "'" . $searchParam . "'"; ?>);
+                var next = $("div.pager a.next").attr('href');
+                $("div.pager a.next").attr('href', next + <?php echo "'" . $searchParam . "'"; ?>);
+            });
+        </script>
+        <div class="newPaginator">
+            <?php
+            if ($this->paginator->count() > 1) {
+                echo $this->paginationControl($this->paginator, 'Sliding', 'user-page.tpl', array('addParam' => $this->pageParam . $searchParam));
+            }
+            ?>
+            <br style="clear: right;"/>
+        </div>
+        <!-- /pager -->
+    <?php } ?>    
+<?php } else { ?>
+    <!--noindex-->
+    <div style="font-size:11px; color:#999; float: right; text-align:right; margin: 0;">
+        Последнее обновление прайса: <?php echo $this->Date(date('Y-m-d H:i:s', $this->task), 'datetimesign'); ?>
+    </div>
+    <!--/noindex-->
+
+    <div class="path">
+        <a href="/"><img alt="" src="/themes/default/images/house.png" /></a>
+        <?php if ($this->sectionName) { ?>
+            <a href="/oils/">Автомасла</a>
+            <span><?php echo $this->sectionName; ?></span>
+        <?php } else { ?>
+            <span>Автомасла</span>
+        <?php } ?>
+    </div>
+    <h1><?php echo Engine_Application::getPageHeader(); ?></h1>
+
+    <div class="search-block">
+        <div class="grey-corner-m">
+            <div class="search-form">
+                <form action="/oils/" method="get">
+                    <div class="search-form-label">Быстрый поиск</div>
+                    <div class="search-form-field input-field"><input type="text" name="oil" value="<?php echo $this->oil; ?>" /></div>
+                    <div class="search-form-button"><input type="image" src="/themes/default/images/search-button.png" /></div>
+                </form>
+            </div>
+            <div class="razd-grey"></div>
+            <div class="filter-mann">
+                <span><a href="<?php /* http://www.total-lub.ru/Auto/lubadvisor.html */ ?>http://total-dnk.lubricantadvisor.com/default.aspx?lang=eng&br=total" rel="nofollow" title="Online сервис по подбору масел по марке автомобиля" target="_blank">Online сервис по подбору масел Elf, Total по марке автомобиля</a></span>
+                <div style="clear: both;"><p><strong>Наши менеджеры готовы вам помочь в подборе автомасел по телефонам:<br> (3822) 266-933, 266-866 (оптовый отдел), 266-687 (розница).</strong></p></div>
+            </div>
+            <?php if (false) { ?>
+                <div class="razd-grey"></div>
+                <div class="search-form-options">
+                    <form action="/oils/" method="get">
+                        <div class="option-row">
+                            <div class="option-title">Тип масла:</div>
+                            <div class="option-type"><input type="checkbox" /><span><a href="#">Синтетическое</a></span></div>
+                            <div class="option-type"><input type="checkbox" /><span><a href="#">Полусинтетическое</a></span></div>
+                            <div class="option-type"><input type="checkbox" /><span><a href="#">Минеральное</a></span></div>
+                        </div>
+                        <div class="option-row">
+                            <div class="option-title">Тип двигателя:</div>
+                            <div class="option-type"><input type="checkbox" /><span><a href="#">Дизельный</a></span></div>
+                            <div class="option-type"><input type="checkbox" /><span><a href="#">Бензиновый</a></span></div>
+                        </div>
+                        <div class="option-row">
+                            <div class="option-title">Применение:</div>
+                            <div class="option-type"><input type="checkbox" /><span><a href="#">Моторные</a></span></div>
+                            <div class="option-type"><input type="checkbox" /><span><a href="#">Трансмиссионные</a></span></div>
+                            <div class="option-type"><input type="checkbox" /><span><a href="#">Тормозные</a></span></div>
+                        </div>
+                        <div class="options-search"><input type="image" src="/themes/default/images/find.png"/></div>                  
+                    </form>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+    <?php if ($this->sectionName) { ?>
+        <h1><?php echo $this->sectionName; ?></h1>
+    <?php } ?>
+
+    <?php if (!$this->oil && !$this->page) { ?>
+        <?php if ($this->oilDescr && Engine_Cms::displayContent(7)) { ?>
+            <?php /* ?><div class="section-info"><?php echo Engine_Cms::displayContent(7); ?></div><?php */ ?>
+        <?php } ?>
+        <?php if ($this->sectionInfo != '') { ?>
+            <div class="section-info"><?php echo $this->sectionInfo; ?></div>
+        <?php } ?>
+    <?php } ?>
+
+
+
+    <div class="search-results">
+        <!--div class="item-info">
+            <div class="to-basket">
+                <span id="basket-link"><?php echo Basket_Models_Control::getCount(); ?></span>
+                <a href="/basket/"><img alt="Корзина" src="/themes/default/images/basket.png" /></a>
+                            
+            </div>
+        </div-->
+    </div>
+
+
+
+
+
+
+
+    <?php if (!sizeof($this->paginator)) { ?>
+        <p>Ничего не найдено.</p>
+
+        <?php
+        if (isset($_GET['oil'])) {
+            $searchRequest = htmlspecialchars($_GET['oil']);
+        }
+        $category = ' (категория: автомасла)';
+        ?>
+        <div class="desired">
+            <h1>Желаемый продукт</h1>
+            <p>Товар с вхождением <strong>«<?php echo $searchRequest; ?>»</strong> — не найден. Возможно сейчас его нет в наличии на складе.</p>
+            <p>Вы можете добавить его в заказ в раздел «Желаемая продукция» — наши менеджеры свяжутся с Вами, подтвердят возможность выполнения заказа и сообщат о возможных сроках доставки.</p>
+
+            <form class="desired-ajax-form" action="/catalog/desired/">
+                <button type="submit" class="btn btn-success">Добавить</button>
+                <div class="desired-ajax-form__input"><input name="name" type="text" class=""form-control placeholder="Наименование товара"<?php
+                    if (isset($searchRequest)) {
+                        echo 'value="' . $searchRequest . $category . '"';
+                    }
+                    ?>></div>
+            </form>
+            <div id="desiredtable">
+                <table style="width: 100%">
+                    <thead>
+                        <tr>
+                            <td style="font-weight: 700">Наименование желаемого товара для заказа</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </thead>
+                    <?php foreach ($this->desired as $product) { ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($product['name']); ?></td>
+                            <td style="width: 50px; text-align: right"><a id="desired<?php echo $product['id']; ?>" style="margin: 25px 0px 0 0;" href="/delete/">Удалить</a></td>
+                        </tr>
+                    <?php } ?>
+                </table>
+            </div>
+        </div>
+
+
+
+
+    <?php } else { ?>
+        <input type="hidden" id="catalog-type" value="oil" />
+        <?php foreach ($this->paginator as $oil) { ?>
+            <?php
+            // Для юридического лица.
+            // 1) Если есть рекомендуемая цена - выводится она.
+            // 2) Если нету рекомендуемой цены, но при этом товар есть в наличии и указана базовая цена - выводиться базовая цена.
+            // Если нету ни 1), ни 2) - ничего не выводится 
+            if ($this->priceType == 'recom') {
+                if ($oil['price_rec'] != 0) {
+                    $price = $oil['price_rec'];
+                } else {
+                    $price = $oil['price_base'];
+                }
+//    	    else {
+//    	        $price = 'noshow';
+//    	    }
+                // Для физ. лиц
+                // Всегда выводится базовая цена вне зависимости от наличия
+            } elseif ($this->priceType == 'base') {
+                $price = $oil['price_base'];
+            }
+            ?>
+            <?php if ($price != 'noshow') { ?>			
+                <div class="catalog-item">
+                    <div class="item-left">
+                        <div class="item-photo">
+                            <a href="/oils/<?php echo $oil['id']; ?>.html">
+                                <?php if ($oil['picture'] != '') { ?>
+                                    <img alt="" src="/<?php echo $oil['picture']; ?>p.jpg"/>
+                                <?php } else { ?>
+                                    <img alt="" src="/themes/default/images/catalog-item.png"/>
+                                <?php } ?>
+                            </a>
+                        </div>
+                        <div class="item-detailed"><a href="/oils/<?php echo $oil['id']; ?>.html">Подробнее</a></div>
+                    </div>
+                    <div class="item-info">
+                        <h2><a href="/oils/<?php echo $oil['id']; ?>.html"><?php echo $oil['invoice_name']; ?></a></h2>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0" class="order-history">
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>Артикул</th>
+                                <!--<th>Упаковка/л.</th>-->
+                                <th>Наличие</th>
+                                <th>Цена/руб.</th>
+                                <th colspan="2">Количество</th>
+                            </tr>
+                            <tr>
+                                <td class="item-check">
+                                    <?php if ($this->auth_id) { ?>
+                                        <?php if (isset($_SESSION['basket']['oil'][$oil['id']])) { ?>
+                                            <input type="checkbox" class="rem-input" onclick="deleteItem(this, 'oil', <?php echo $oil['id']; ?>);" checked="checked"/>
+                                        <?php } else { ?>
+                                            <input type="checkbox" class="add-input" onclick="addItem(this, 'oil', <?php echo $oil['id']; ?>);" />
+                                        <?php } ?>
+                                    <?php } else { ?>
+                                        <input type="checkbox" onclick="regCart();"/>
+                                    <?php } ?>
+                                </td>
+                                <td class="item-name"><a href="/oils/<?php echo $oil['id']; ?>.html"><?php echo 60000 + $oil['id']; ?></a></td>
+                                <!--<td class="item-volume">1 л.</td>-->
+                                <td class="item-price">
+                                    <?php echo number_format($oil['env'], 0, ' ', ' '); ?>
+                                </td>
+                                <td class="item-price">
+                                    <span><?php echo number_format($price, 0, ' ', ' '); ?> руб.</span>
+                                </td>
+                                <?php //if (isset($_SESSION['basket']['oil'][$oil['id']])) $value = $_SESSION['basket']['oil'][$oil['id']]; else $value = 1;   ?>
+                                <td class="item-amount">
+                                    <a class="add-less" href="javascript:{}">Меньше</a>
+                                    <?php if (isset($_SESSION['basket']['oil'][$oil['id']])) { ?>
+                                        <?php $value = $_SESSION['basket']['oil'][$oil['id']]; ?>
+                                        <div class="input-field"><div><div><input type="text" name="price" id="<?php echo $oil['id']; ?>" value="<?php echo $value; ?>" onchange="changeAmount(this, 'oil', <?php echo $oil['id']; ?>);" /></div></div></div>
+                                    <?php } else { ?>
+                                        <div class="input-field"><div><div><input type="text" name="price" id="<?php echo $oil['id']; ?>" value="1" /></div></div></div>
+                                    <?php } ?>
+                                    <a class="add-more" href="javascript:{}">Больше</a>
+                                </td>
+                                <td class="item-action">
+                                    <?php if ($this->auth_id) { ?>
+                                        <?php if (isset($_SESSION['basket']['oil'][$oil['id']])) { ?>
+                                            <a class="delete-item" href="javascript:{};" onclick="deleteItem(this, 'oil', <?php echo $oil['id']; ?>);">Удалить</a>
+                                        <?php } else { ?>
+                                            <a class="add-to-bask" href="javascript:{};" onclick="addItem(this, 'oil', <?php echo $oil['id']; ?>);">В корзину</a>
+                                        <?php } ?>
+                                    <?php } else { ?>
+                                        <a class="add-to-bask" href="javascript:{};" onclick="regCart();">В корзину</a>
+                                    <?php } ?>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="page-razd"></div>
+            <?php } ?>
+
+        <?php } ?>
+    <?php } ?>
+
+
+    <?php if (false) { ?>
+        <!--<div class="catalog-item">
+                <div class="item-left">
+                        <div class="item-photo">
+                                <a href="#"><img alt="" src="/themes/default/images/catalog-item.png"/></a>
+                        </div>
+                        <div class="item-detailed"><a href="#">Подробнее</a></div>
+                </div>
+                <div class="item-info">
+                        <h2><a href="#">Трансмиссионное масло Transmission SYN FE 75W-90</a></h2>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0" class="order-history">
+                                <tr>
+                                        <th>Артикул</th>
+                                        <th>Упаковка/л.</th>
+                                        <th>Цена/руб.</th>
+                                        <th colspan="2">Количество</th>
+                                </tr>
+                                <tr>
+                                        <td class="item-name"><a href="#">QUA EN 9000 0W30</a></td>
+                                        <td class="item-volume">1 л.</td>
+                                        <td class="item-price"><span>209 руб.</span></td>
+                                        <td class="item-amount"><div class="input-field"><div><div><input type="text" value="1" /></div></div></div></td>
+                                        <td class="item-action"><a class="add-to-bask" href="#">В корзину</a></td>
+                                </tr>
+                                <tr>
+                                        <td class="item-name"><a href="#">QUA EN 9000 0W30</a></td>
+                                        <td>4 л.</td>
+                                        <td><span>792 руб.</span></td>
+                                        <td><div class="input-field"><div><div><input type="text" value="1" /></div></div></div></td>
+                                        <td><a class="add-to-bask" href="#">В корзину</a></td>
+                                </tr>
+                                <tr>
+                                        <td class="item-name"><a href="#">QUA EN 9000 0W30</a></td>
+                                        <td>5 л.</td>
+                                        <td><span>968 руб.</span></td>
+                                        <td><div class="input-field"><div><div><input type="text" value="1" /></div></div></div></td>
+                                        <td><a class="add-to-bask" href="#">В корзину</a></td>
+                                </tr>
+                                <tr>
+                                        <td class="item-name"><a href="#">QUA EN 9000 0W30</a></td>
+                                        <td>100 л.</td>
+                                        <td><span>1800 руб.</span></td>
+                                        <td><div class="input-field"><div><div><input type="text" value="1" /></div></div></div></td>
+                                        <td><a class="add-to-bask" href="#">В корзину</a></td>
+                                </tr>
+                        </table>
+                </div>
+        </div>
+        <div class="page-razd"></div>-->
+        <!--<div class="catalog-item">
+                <div class="item-left">
+                        <div class="item-photo">
+                                <a href="#"><img alt="" src="/themes/default/images/catalog-item.png"/></a>
+                        </div>
+                        <div class="item-detailed"><a href="#">Подробнее</a></div>
+                </div>
+                <div class="item-info">
+                        <h2><a href="#">Трансмиссионное масло Transmission SYN FE 75W-90</a></h2>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0" class="order-history">
+                                <tr>
+                                        <th>Артикул</th>
+                                        <th>Упаковка/л.</th>
+                                        <th>Цена/руб.</th>
+                                        <th colspan="2">Количество</th>
+                                </tr>
+                                <tr>
+                                        <td class="item-name"><a href="#">QUA EN 9000 0W30</a></td>
+                                        <td class="item-volume">1 л.</td>
+                                        <td class="item-price"><span>209 руб.</span></td>
+                                        <td class="item-amount"><div class="input-field"><div><div><input type="text" value="1" /></div></div></div></td>
+                                        <td class="item-action"><a class="add-to-bask" href="#">В корзину</a></td>
+                                </tr>
+                                <tr>
+                                        <td class="item-name"><a href="#">QUA EN 9000 0W30</a></td>
+                                        <td>4 л.</td>
+                                        <td><span>792 руб.</span></td>
+                                        <td><div class="input-field"><div><div><input type="text" value="1" /></div></div></div></td>
+                                        <td><a class="add-to-bask" href="#">В корзину</a></td>
+                                </tr>
+                                <tr>
+                                        <td class="item-name"><a href="#">QUA EN 9000 0W30</a></td>
+                                        <td>5 л.</td>
+                                        <td><span>968 руб.</span></td>
+                                        <td><div class="input-field"><div><div><input type="text" value="1" /></div></div></div></td>
+                                        <td><a class="add-to-bask" href="#">В корзину</a></td>
+                                </tr>
+                                <tr>
+                                        <td class="item-name"><a href="#">QUA EN 9000 0W30</a></td>
+                                        <td>100 л.</td>
+                                        <td><span>1800 руб.</span></td>
+                                        <td><div class="input-field"><div><div><input type="text" value="1" /></div></div></div></td>
+                                        <td><a class="add-to-bask" href="#">В корзину</a></td>
+                                </tr>
+                        </table>
+                </div>
+        </div>
+        <div class="page-razd"></div>-->
+    <?php } ?>
+
+    <!-- pager -->
+
+    <?php
+    $searchParam = "&";
+    foreach ($_GET['filters'] as $key => $value) {
+        foreach ($value as $key1 => $value1) {
+            if ($key == "brands" || $key == "viscosity" || $key == "type") {
+                $searchParam .= "filters[" . $key . "][]=" . $value1 . "&";
+            } else {
+                $searchParam .= "filters[" . $key . "][" . $key1 . "]=" . $value1 . "&";
+            }
+        }
+    }
+    ?>
+    <script>
+        $(document).ready(function () {
+            var prev = $("div.pager a.prev").attr('href');
+            $("div.pager a.prev").attr('href', prev + <?php echo "'" . $searchParam . "'"; ?>);
+            var next = $("div.pager a.next").attr('href');
+            $("div.pager a.next").attr('href', next + <?php echo "'" . $searchParam . "'"; ?>);
+        });
+    </script>
+    <?php
+    if ($this->paginator->count() > 1) {
+        echo $this->paginationControl($this->paginator, 'Sliding', 'user-page.tpl', array('addParam' => $this->pageParam . $searchParam));
+    }
+    ?>
+    <!-- /pager -->
+<?php } ?>

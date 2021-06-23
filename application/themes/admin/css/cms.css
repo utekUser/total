@@ -1,0 +1,631 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    padding-top:30px;
+    font:11px "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+}
+
+form {
+    margin-left:8px;
+    font-weight:400;
+    -moz-border-radius:11px;
+    -khtml-border-radius:11px;
+    -webkit-border-radius:11px;
+    border-radius:11px;
+    background:#fff;
+    border:1px solid #e5e5e5;
+    -moz-box-shadow:rgba(200,200,200,1) 0 4px 18px;
+    -webkit-box-shadow:rgba(200,200,200,1) 0 4px 18px;
+    -khtml-box-shadow:rgba(200,200,200,1) 0 4px 18px;
+    box-shadow:rgba(200,200,200,1) 0 4px 18px;
+    padding:16px 16px 40px;
+}
+
+form .forgetmenot {
+    font-weight:400;
+    float:left;
+    margin-bottom:0;
+}
+
+.button-primary {
+    font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+    border:none;
+    font-size:12px;
+    -moz-border-radius:11px;
+    -khtml-border-radius:11px;
+    -webkit-border-radius:11px;
+    border-radius:11px;
+    cursor:pointer;
+    text-decoration:none;
+    margin-top:-3px;
+    border-style:solid;
+    border-width:1px;
+    padding:3px 10px;
+}
+
+#login form p {
+    margin-bottom:0;
+}
+
+label {
+    color:#777;
+    font-size:13px;
+}
+
+form .forgetmenot label {
+    font-size:11px;
+    line-height:19px;
+}
+form .submit,.alignright {
+    float:right;
+}
+
+form p {
+    margin-bottom:24px;
+}
+
+h1 a {
+    background:url(/images/cms/cms-logo.gif) no-repeat top center;
+    width:326px;
+    height:67px;
+    text-indent:-9999px;
+    overflow:hidden;
+    padding-bottom:15px;
+    display:block;
+}
+
+#nav{
+    text-shadow:rgba(255,255,255,1) 0 1px 0;
+}
+#backtoblog{
+    position:absolute;
+    top:0;
+    left:0;
+    border-bottom:#c6c6c6 1px solid;
+    background:#d9d9d9;
+    height:30px;
+    width:100%;
+}
+
+#backtoblog a {
+    text-decoration:none;
+    display:block;
+    padding:8px 0 0 15px;
+}
+
+#login {
+    width:320px;
+    margin:7em auto;
+}
+
+#login_error,.message {
+    -moz-border-radius:3px;
+    -khtml-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    border-style:solid;
+    border-width:1px;
+    margin:0 0 16px 8px;
+    padding:12px;
+}
+
+#nav {
+    margin:0 0 0 8px;
+    padding:16px;
+}
+
+body form .input {
+    font-size:24px;
+    width:97%;
+    margin-top:2px;
+    margin-right:6px;
+    margin-bottom:16px;
+    border:1px solid #e5e5e5;
+    background:#fbfbfb;
+    padding:3px;
+}
+
+input {
+    color:#555;
+}
+
+.clear {
+    clear:both;
+}
+
+
+
+
+
+
+
+
+
+
+kbd,code {
+background:#eaeaea;
+}
+
+.find-box-search {
+background-color:#f1f1f1;
+border-color:#dfdfdf;
+}
+
+body>#upload-menu {
+border-bottom-color:#fff;
+}
+
+#postcustomstuff table,#your-profile fieldset,#rightnow,div.dashboard-widget,#dashboard-widgets p.dashboard-widget-links,#replyrow #ed_reply_toolbar input {
+border-color:#ccc;
+}
+
+#poststuff .inside label.waiting {
+color:orange;
+}
+
+#poststuff .inside label.approved {
+color:green;
+}
+
+#postcustomstuff table {
+background-color:#F9F9F9;
+border-color:#dfdfdf;
+}
+
+div.dashboard-widget-error {
+background-color:#c43;
+}
+
+div.dashboard-widget-notice {
+background-color:#cfe1ef;
+}
+
+div.dashboard-widget-submit {
+border-top-color:#ccc;
+}
+
+input.disabled,textarea.disabled {
+background-color:#ccc;
+}
+
+.widget .widget-top,.postbox h3,.stuffbox h3 {
+background:#dfdfdf url("http://pr-tomsk.ru/wp-admin/images/gray-grad.png") repeat-x left top;
+text-shadow:#fff 0 1px 0;
+}
+
+.form-table th,.form-wrap label {
+color:#222;
+text-shadow:#fff 0 1px 0;
+}
+
+strong .post-com-count span {
+background-color:#21759b;
+}
+
+.sorthelper {
+background-color:#ccf3fa;
+}
+
+.ac_over {
+background-color:#f0f0b8;
+}
+
+.ac_results {
+background-color:#fff;
+border-color:gray;
+}
+
+.ac_results li {
+color:#101010;
+}
+
+.bar {
+background-color:#e8e8e8;
+border-right-color:#99d;
+}
+
+div.error,.login #login_error {
+background-color:#ffebe8;
+border-color:#c00;
+}
+
+div.error a {
+color:#c00;
+}
+
+.form-invalid {
+background-color:#ffebe8 !important;
+}
+
+.form-invalid input,.form-invalid select {
+border-color:#c00 !important;
+}
+
+.submit {
+border-color:#DFDFDF;
+}
+
+.highlight {
+background-color:#e4f2fd;
+color:#000;
+}
+
+.media-item {
+border-bottom-color:#dfdfdf;
+}
+
+.media-upload-form label.form-help,td.help {
+color:#9a9a9a;
+}
+
+.post-com-count {
+background-image:url(http://pr-tomsk.ru/wp-admin/images/bubble_bg.gif);
+color:#fff;
+}
+
+.post-com-count span {
+color:#fff;
+background-color:#bbb;
+}
+
+.post-com-count:hover span {
+background-color:#d54e21;
+}
+
+.quicktags,.search {
+background-color:#ccc;
+color:#000;
+}
+
+.side-info h5 {
+border-bottom-color:#dadada;
+}
+
+.button,.button-secondary,.submit input,input[type=button],input[type=submit] {
+color:#464646;
+border-color:#bbb;
+}
+
+.button:hover,.button-secondary:hover,.submit input:hover,input[type=button]:hover,input[type=submit]:hover {
+color:#000;
+border-color:#666;
+}
+
+.button,.submit input,.button-secondary {
+background:#f2f2f2 url(http://pr-tomsk.ru/wp-admin/images/white-grad.png) repeat-x scroll left top;
+text-shadow:rgba(255,255,255,1) 0 1px 0;
+}
+
+.button:active,.submit input:active,.button-secondary:active {
+background:#eee url(http://pr-tomsk.ru/wp-admin/images/white-grad-active.png) repeat-x scroll left top;
+}
+
+input.button-primary,button.button-primary,a.button-primary {
+font-weight:700;
+color:#fff;
+background:#21759B url(/images/cms/button-grad.png) repeat-x scroll left top;
+text-shadow:rgba(0,0,0,0.3) 0 -1px 0;
+border-color:#298cba;
+}
+
+input.button-primary:active,button.button-primary:active,a.button-primary:active {
+background:#21759b url(http://pr-tomsk.ru/wp-admin/images/button-grad-active.png) repeat-x scroll left top;
+color:#eaf2fa;
+}
+
+input.button-primary:hover,button.button-primary:hover,a.button-primary:hover,a.button-primary:focus,a.button-primary:active {
+color:#eaf2fa;
+border-color:#13455b;
+}
+
+.button-disabled,.button[disabled],.button:disabled,.button-secondary[disabled],.button-secondary:disabled,a.button.disabled {
+color:#aaa !important;
+border-color:#ddd !important;
+}
+
+.button-primary-disabled,.button-primary[disabled],.button-primary:disabled {
+color:#9FD0D5 !important;
+background:#298CBA !important;
+}
+
+#rightnow .rbutton {
+background-color:#ebebeb;
+color:#264761;
+}
+
+.submitbox .submit {
+background-color:#464646;
+color:#ccc;
+}
+
+.plugins a.delete:hover,#all-plugins-table .plugins a.delete:hover,#search-plugins-table .plugins a.delete:hover,.submitbox .submitdelete {
+color:red;
+border-bottom-color:red;
+}
+
+.submitbox .submitdelete:hover,#media-items a.delete:hover {
+color:#fff;
+background-color:red;
+border-bottom-color:red;
+}
+
+#normal-sortables .submitbox .submitdelete:hover {
+color:#000;
+background-color:red;
+border-bottom-color:red;
+}
+
+.tablenav .dots {
+border-color:transparent;
+}
+
+.tablenav .next,.tablenav .prev {
+color:#21759b;
+border-color:transparent;
+}
+
+.tablenav .next:hover,.tablenav .prev:hover {
+color:#d54e21;
+border-color:transparent;
+}
+
+div.updated,.login .message {
+background-color:#ffffe0;
+border-color:#e6db55;
+}
+
+a.page-numbers {
+border-bottom-color:#B8D3E2;
+}
+
+.widefat th {
+text-shadow:rgba(255,255,255,0.8) 0 1px 0;
+}
+
+.widefat thead tr th,.widefat tfoot tr th,h3.dashboard-widget-title,h3.dashboard-widget-title span,h3.dashboard-widget-title small,.find-box-head {
+color:#333;
+background:#dfdfdf url(http://pr-tomsk.ru/wp-admin/images/gray-grad.png) repeat-x scroll left top;
+}
+
+h3.dashboard-widget-title small a {
+color:#d7d7d7;
+}
+
+#plugin-information .action-button {
+background-color:#d54e21;
+color:#fff;
+}
+
+div#media-upload-header,div#plugin-information-header {
+background-color:#f9f9f9;
+border-bottom-color:#dfdfdf;
+}
+
+#currenttheme img {
+border-color:#666;
+}
+
+input.readonly,textarea.readonly {
+background-color:#ddd;
+}
+
+#ed_toolbar input,#ed_reply_toolbar input {
+background:#fff url("http://pr-tomsk.ru/wp-admin/images/fade-butt.png") repeat-x 0 -2px;
+}
+
+#editable-post-name {
+background-color:#fffbcc;
+}
+
+.login #nav a {
+color:#21759b !important;
+}
+
+.login #nav a:hover {
+color:#d54e21 !important;
+}
+
+#footer {
+color:#777;
+background:0;
+border-color:#d1d1d1;
+}
+
+.plugin-update-tr .update-message {
+background-color:#fffbe4;
+border-color:#dfdfdf;
+}
+
+.plugins .inactive a {
+color:#579;
+}
+
+#the-comment-list tr.undo,#the-comment-list div.undo {
+background-color:#f4f4f4;
+}
+
+#the-comment-list .unapproved {
+background-color:#ffffe0;
+}
+
+#the-comment-list .approve a {
+color:#006505;
+}
+
+#the-comment-list .unapprove a {
+color:#d98500;
+}
+
+table.widefat span.delete a,table.widefat span.trash a,table.widefat span.spam a,#dashboard_recent_comments .delete a,#dashboard_recent_comments .trash a,#dashboard_recent_comments .spam a {
+color:#bc0b0b;
+}
+
+.curtime #timestamp {
+background-image:url(http://pr-tomsk.ru/wp-admin/images/date-button.gif);
+}
+
+#quicktags #ed_link {
+color:#00f;
+}
+
+#rightnow .youhave {
+background-color:#f0f6fb;
+}
+
+#rightnow a {
+color:#448abd;
+}
+
+.tagchecklist span a,#bulk-titles div a {
+background:url(http://pr-tomsk.ru/wp-admin/images/xit.gif) no-repeat;
+}
+
+.tagchecklist span a:hover,#bulk-titles div a:hover {
+background:url(http://pr-tomsk.ru/wp-admin/images/xit.gif) no-repeat -10px 0;
+}
+
+#update-nag,.update-nag {
+background-color:#FFFBCC;
+color:#555;
+border-color:#E6DB55;
+}
+
+#wphead {
+border-bottom:#c6c6c6 1px solid;
+background:0;
+}
+
+#user_info a:link,#user_info a:visited,#footer a:link,#footer a:visited {
+color:#222;
+text-decoration:none;
+}
+
+#user_info a:hover,#footer a:hover {
+color:#000;
+text-decoration:underline !important;
+}
+
+#pass-strength-result {
+background-color:#eee;
+border-color:#ddd !important;
+}
+
+#pass-strength-result.bad {
+background-color:#ffb78c;
+border-color:#ff853c !important;
+}
+
+#pass-strength-result.good {
+background-color:#ffec8b;
+border-color:#fc0 !important;
+}
+
+#pass-strength-result.short {
+background-color:#ffa0a0;
+border-color:#f04040 !important;
+}
+
+#pass-strength-result.strong {
+background-color:#c3ff88;
+border-color:#8dff1c !important;
+}
+
+#quicktags {
+background-color:#dfdfdf;
+background-image:url("http://pr-tomsk.ru/wp-admin/images/ed-bg.gif");
+border-color:#dfdfdf;
+}
+
+#ed_toolbar input {
+border-color:#C3C3C3;
+}
+
+#poststuff .wp_themeSkin .mceStatusbar {
+border-color:#EDEDED;
+}
+
+#poststuff #edButtonPreview,#poststuff #edButtonHTML {
+background-color:#f1f1f1;
+color:#999;
+border-color:#dfdfdf;
+}
+
+#poststuff #editor-toolbar .active {
+border-bottom-color:#e9e9e9;
+background-color:#e9e9e9;
+color:#333;
+}
+
+#post-status-info {
+background-color:#EDEDED;
+}
+
+
+
+
+
+html,.wp-dialog,.alternate,.alt,#dashboard_secondary div.dashboard-widget-content ul li a {
+background-color:#f9f9f9;
+}
+
+
+input[readonly],.plugins .inactive,.plugins .inactive th,.plugins .inactive td,tr.inactive+tr.plugin-update-tr .plugin-update {
+background-color:#eee;
+}
+
+.find-box,ul.category-tabs li.tabs,ul.add-menu-item-tabs li.tabs,.wp-tab-active,#edithead,#replyhead,.inline-editor .quick-edit-save,.comment-ays th {
+background-color:#f1f1f1;
+}
+
+.find-box-inside,.checkbox,.side-info,.plugins tr,#your-profile #rich_editing,.widget,.postbox,#titlediv #title,#adminmenu .wp-submenu ul {
+background-color:#fff;
+}
+
+a.page-numbers:hover,#current-theme img {
+border-color:#999;
+}
+
+body,#wpbody,.form-table .pre,#side-sortables .category-tabs .tabs a,#side-sortables .add-menu-item-tabs .tabs a,.wp-tab-bar .wp-tab-active a,th.sortable a:hover,th.sortable a:active,th.sortable a:focus,#post-body ul.category-tabs li.tabs a,#post-body ul.add-menu-item-tabs li.tabs a,body.press-this ul.category-tabs li.tabs a {
+color:#333;
+}
+
+#poststuff .inside label.spam,#poststuff .inside label.deleted,div#media-upload-error,.file-error,abbr.required,.widget-control-remove:hover,table.widefat .delete a:hover,table.widefat .trash a:hover,table.widefat .spam a:hover,#dashboard_recent_comments .delete a:hover,#dashboard_recent_comments .trash a:hover #dashboard_recent_comments .spam a:hover {
+color:red;
+}
+
+#postcustomstuff thead th,.folded #adminmenu li.menu-top,#adminmenu .wp-submenu .wp-submenu-head {
+background-color:#F1F1F1;
+}
+
+#plugin-information .action-button a,#plugin-information .action-button a:hover,#plugin-information .action-button a:visited,h3.dashboard-widget-title small a:hover {
+color:#fff;
+}
+
+.description,.form-wrap p,.howto,.nonessential,#edit-slug-box,.form-input-tip,.rss-widget span.rss-date,.subsubsub,.side-info ul {
+color:#666;
+}
+
+.ac_match,.subsubsub a.current,.update-message,.plugins .active,.plugins .active th,.plugins .active td,.widget .widget-top,.ui-sortable .postbox h3:hover,.wp_themeSkin *,.wp_themeSkin a:hover,.wp_themeSkin a:link,.wp_themeSkin a:visited,.wp_themeSkin a:active,.wp_themeSkin .mceMenu .mceText,.wp_themeSkin .mceMenuItemTitle span.mceText,#screen-meta-links a.show-settings:hover,#favorite-actions a:hover,#removing-widget span {
+color:#000;
+}
+
+.wrap h2,.ui-sortable .postbox h3,.login #backtoblog a,#wphead h1 a,#favorite-actions a {
+color:#464646;
+}
+
+.available-theme a.screenshot,div.widgets-sortables,#widgets-left .inactive {
+background-color:#f1f1f1;
+border-color:#ddd;
+}
+
+#media-upload,#media-upload .media-item .slidetoggle,.wp_themeSkin iframe {
+background:#fff;
+}
+
+
+a:hover,a:active,a:focus,#wphead #viewsite a:hover,#adminmenu a:hover,#adminmenu ul.wp-submenu a:hover,#the-comment-list .comment a:hover,#rightnow a:hover,#media-upload a.del-link:hover,div.dashboard-widget-submit input:hover,.subsubsub a:hover,.subsubsub a.current:hover,.ui-tabs-nav a:hover,.plugins .inactive a:hover,#all-plugins-table .plugins .inactive a:hover,#search-plugins-table .plugins .inactive a:hover,.tablenav .tablenav-pages a:hover,.tablenav .tablenav-pages a:focus,.sidebar-name:hover,#removing-widget {
+color:#d54e21;
+}

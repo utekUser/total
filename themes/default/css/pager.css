@@ -1,0 +1,39 @@
+.pager{
+	overflow: hidden;
+	margin: 10px 0 0 0;
+}
+.pager a{
+	display: block;
+	float: left;
+	width: 25px;
+	height: 25px;
+	background: url(/themes/default/images/pager.png) no-repeat 0 0;
+	text-align: center;
+	line-height: 25px;
+	font-size: 11px;
+	color: #ff9b00;
+	text-decoration: none;
+	margin: 0 3px 0 0;
+}
+.pager a.active{
+	background: url(/themes/default/images/pager.png) no-repeat 0 -25px;
+	color: #0c0c0c;
+}
+.pager a.next,
+.pager a.tonext,
+.pager a.prev,
+.pager a.toprev{
+	font-size: 0;
+}
+.pager a.next{
+	background: url(/themes/default/images/pager-nav.png) no-repeat 0 0;
+}
+.pager a.tonext{
+	background: url(/themes/default/images/pager-nav.png) no-repeat 0 -25px;
+}
+.pager a.prev{
+	background: url(/themes/default/images/pager-nav.png) no-repeat 0 -50px;
+}
+.pager a.toprev{
+	background: url(/themes/default/images/pager-nav.png) no-repeat 0 -75px;
+}

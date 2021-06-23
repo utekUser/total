@@ -1,0 +1,97 @@
+/** TOP ADMIN PANEL **/
+#adminpanel{
+	background-color: #fff;
+    color: #555;
+    font: 12px/24px Verdana, Arial, Helvetica, sans-serif;
+    height: 24px;
+    left: 0;
+    min-width: 960px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}
+.quicklinks{
+	margin: 0 0 0 35px;
+}
+#adminpanel .quicklinks ul {
+    text-align: left;
+}
+#adminpanel ul, 
+#adminpanel ul li {
+    background: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 99999;
+}
+#adminpanel .quicklinks ul li {
+    float: left;
+    line-height: 24px;
+}
+#adminpanel .quicklinks a {
+    color: #369;
+    display: block;
+    margin: 0;
+    padding: 0 10px;
+    height: 24px;
+	
+}  
+#adminpanel a {
+    background: none;
+    border: medium none;
+    outline: medium none;
+    text-decoration: none;
+}
+#adminpanel a:hover{
+	text-decoration: underline;
+}
+#adminpanel a.admin-arrow-down{
+	padding: 0 15px 0 10px; 
+	margin: 0 10px 0 0;
+	height: 24px;
+	
+	color: #555;
+	background: url("/application/themes/admin/images/adminpanel/admin-arrow-down.png") no-repeat right center; 
+}
+#adminpanel .quicklinks .submenu ul {
+    display: none;
+    float: none;
+    position: absolute;
+    top: 24px;
+}
+#adminpanel .quicklinks .submenu ul li{ 
+	border-right: 1px solid #DFDFDF;
+    border-left: 1px solid #DFDFDF;
+    background-color: #ededed;
+    width: 158px;
+}
+#adminpanel .quicklinks .submenu ul li.submenu-top{
+	height: 9px;
+	width: 158px;
+	background:  url("/application/themes/admin/images/adminpanel/submenu-top-fon.png") top center no-repeat;
+}
+#adminpanel .quicklinks .submenu ul li.submenu-razd{
+	height: 12px;
+	width: 158px;
+	background: #ededed url("/application/themes/admin/images/adminpanel/submenu-razd.png") center center no-repeat;
+}
+#adminpanel .quicklinks .submenu ul li.submenu-end{
+	border-right:0;
+	border-left:0;
+	height:7px;
+	width:160px;
+	background: url("/application/themes/admin/images/adminpanel/submenu-end.png") center center no-repeat;
+}
+
+#adminpanel .quicklinks li:hover>ul,
+#adminpanel .quicklinks li.hover>ul{
+	display:block;
+}
+#adminpanel .quicklinks .submenu ul li a{
+    color: #555;
+    min-width: 140px;
+    text-shadow: none;
+    white-space: nowrap;
+}

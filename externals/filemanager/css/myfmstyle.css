@@ -1,0 +1,458 @@
+/* This file contains the CSS data for all popups in TinyMCE */
+html, body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #f5f5f5;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	scrollbar-3dlight-color: #F0F0EE;
+	scrollbar-arrow-color: #676662;
+	scrollbar-base-color: #F0F0EE;
+	scrollbar-darkshadow-color: #DDDDDD;
+	scrollbar-face-color: #E0E0DD;
+	scrollbar-highlight-color: #F0F0EE;
+	scrollbar-shadow-color: #F0F0EE;
+	scrollbar-track-color: #F5F5F5;
+
+}
+
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+input {
+	background: #F0F0EE;
+	border: 0px solid #000000;
+}
+
+td, input, select, textarea {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+
+select, textarea {
+	border: 1px solid #000000;
+}
+
+.input_noborder {
+	border: 0;
+}
+
+#insert, .updateButton {
+   font-weight: bold;
+   width: 90px;
+   height: 21px;
+   border: 0;
+   background-image: url('../images/insert_button_bg.gif');
+   cursor: pointer;
+}
+
+/* Mozilla only style */
+html>body #insert, html>body #cancel {
+	padding-bottom: 2px;
+}
+
+.title {
+	font-size: 12px;
+	font-weight: bold;
+	color: #2B6FB6;
+}
+
+table.charmap {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #AAAAAA;
+}
+
+td.charmap, td.charmapOver {
+	color: #000000;
+	border-color: #AAAAAA;
+	border-style: solid;
+	border-width: 1px;
+	text-align: center;
+	font-size: 12px;
+}
+
+td.charmapOver {
+	background-color: #CCCCCC;
+	cursor: default;
+}
+
+a.charmap {
+	color: #000000;
+	text-decoration: none
+}
+
+.wordWrapCode {
+	vertical-align: middle;
+	border: 1px none #000000;
+	background-color: transparent;
+}
+
+input.radio {
+	border: 0px none #000000;
+	background-color: transparent;
+	vertical-align: middle;
+}
+
+input.checkbox {
+	border: 0px none #FFFFFF;
+	background-color: transparent;
+	vertical-align: middle;
+}
+
+/* Tabs classes */
+
+.tabs {
+	float: left;
+	width: 100%;
+	line-height: normal;
+	background-image: url("../images/xp/tabs_bg.gif");
+}
+
+.tabs ul {
+	margin: 0;
+	padding: 0 0 0;
+	list-style: none;
+}
+
+.tabs li {
+	float: left;
+	background: url("../images/xp/tab_bg.gif") no-repeat left top;
+	margin: 0;
+	margin-left: 0;
+	margin-right: 2px;
+	padding: 0 0 0 10px;
+	line-height: 18px;
+}
+
+.tabs li.current {
+	background: url("../images/xp/tab_sel_bg.gif") no-repeat left top;
+	margin-right: 2px;
+}
+
+.tabs span {
+	float: left;
+	display: block;
+	background: url("../images/xp/tab_end.gif") no-repeat right top;
+	padding: 0px 10px 0 0;
+}
+
+.tabs .current span {
+	background: url("../images/xp/tab_sel_end.gif") no-repeat right top;
+}
+
+.tabs a {
+	text-decoration: none;
+	font-family: Verdana, Arial;
+	font-size: 10px;
+}
+
+.tabs a:link, .tabs a:visited, .tabs a:hover {
+	color: black;
+}
+
+.tabs a:hover {
+}
+
+.tabs .current {
+}
+
+.tabs .current a, .tabs .current a:link, .tabs .current a:visited {
+}
+
+.panel_wrapper div.panel {
+	display: none;
+}
+
+.panel_wrapper div.current {
+	display: block;
+	width: 100%;
+	height: 300px;
+	overflow: visible; /* Should be auto but that breaks Safari */
+}
+
+.panel_wrapper {
+	border: 1px solid #919B9C;
+	border-top: 0px;
+	padding: 10px;
+	padding-top: 5px;
+	clear: both;
+	background-color: white;
+}
+
+fieldset {
+	border: 1px solid #919B9C;
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	padding: 0;
+	margin: 0;
+	padding: 4px;
+}
+
+legend {
+	color: #2B6FB6;
+	font-weight: bold;
+}
+
+.properties {
+	width: 100%;
+}
+
+.properties .column1 {
+}
+
+.properties .column2 {
+	text-align: left;
+}
+
+a:link, a:visited {
+	color: black;
+	border: 0px none #000000;
+	background-color: transparent;
+}
+
+
+#plugintable thead {
+	font-weight: bold;
+	background-color: #DDDDDD;
+}
+
+#plugintable, #about #plugintable td {
+	border: 1px solid #919B9C;
+}
+
+#plugintable {
+	width: 99%;
+	margin-top: 10px;
+}
+
+#pluginscontainer {
+	height: 290px;
+	overflow: auto;
+}
+
+/* MSIE Specific styles */
+
+* html .panel_wrapper {
+	width: 100%;
+}
+
+.column {
+	float: left;
+}
+
+h1, h2, h3, h4 {
+	color: #2B6FB6;
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+}
+
+h3 {
+	font-size: 14px;
+}
+
+#link .panel_wrapper, #link div.current {
+	height: 125px;
+}
+
+#image .panel_wrapper, #image div.current {
+	height: 190px;
+}
+
+form {
+	margin: 0px;
+	padding: 0px;
+}
+
+.filelistHeadRow td {
+	background-color: #e4e4e4;
+	border: 1px solid #c9c9c9;
+	/*border-left: 1px solid buttonhighlight;
+	border-bottom: 1px solid buttonshadow;
+	border-right: 1px solid buttonshadow;*/
+	font-weight: bold;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.filelistHeadCol a, .filelistHeadCol a:visited {
+	color: #000000;
+}
+
+
+/** NEW ADDED STYLES **/
+
+.site-title{
+	border: 1px solid #c9c9c9;
+	background: #e4e4e4;
+	margin: 5px 5px;
+	padding: 5px;
+	text-align: center;
+}
+
+#path{
+	border: 1px solid #3f6f9f;
+	background: #fff;
+	height: 20px;
+	width: 355px;
+}
+#log{
+	border: 1px solid #3f6f9f;
+	background: #fff;
+	height: 40px;
+	width: 330px;
+}
+
+.filem-block{
+	margin: 5px;
+	font-size: 8pt;
+	font-weight: bold;
+}
+/** GREY BLOCK **/
+.filem-block-tl{
+	background: url("../images/filem-block-tl.png") no-repeat left top;
+	height: 5px;
+}
+.filem-block-tr{
+	background: url("../images/filem-block-tr.png") no-repeat right top;
+	height: 5px;
+}
+.filem-block-tm{
+	background: url("../images/filem-block-tm.png") repeat-x center top;
+	height: 5px;
+	margin: 0 5px;
+}
+.filem-block-bl{
+	background: url("../images/filem-block-bl.png") no-repeat left top;
+	height: 5px;
+}
+.filem-block-br{
+	background: url("../images/filem-block-br.png") no-repeat right top;
+	height: 5px;
+}
+.filem-block-bm{
+	background: url("../images/filem-block-bm.png") repeat-x center top;
+	height: 5px;
+	margin: 0 5px;
+}
+.filem-block-ml{
+	background: url("../images/filem-block-ml.png") repeat-y left center;
+}
+.filem-block-mr{
+	background: url("../images/filem-block-mr.png") repeat-y right center;
+}
+.filem-block-mm{
+	background: #d9d9d9;
+	margin: 0 5px;
+	min-height: 80px;
+	padding: 5px 0 0 5px;
+}
+.filem-block a{
+	color: #336699;
+	font-weight: normal;
+}
+
+.filem-block input{
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+.input-delete{
+	border: 1px solid #cd0000;
+	background: #ed0101;
+	color: #fff;
+	width: 115px;
+	height: 18px;
+}
+.input-add-catalog{
+	border: 1px solid #369;
+	background: #fff;
+	width: 218px;
+	height: 18px;
+}
+.submit-add-catalog{
+	margin: 5px 0 0 0;
+}
+.submit-add-catalog,
+.input-upload{
+	border: 1px solid #006633;
+	background: #008044;
+	color: #fff;
+}
+.input-upload-parent{
+	overflow: hidden;
+}
+.input-upload{
+	display: block;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 5px 0 0 0;
+    cursor: pointer;
+}
+a.input-reset{
+	border: 1px solid #cd0000;
+	background: #ed0101;
+	color: #fff;
+	display: block;
+	width: 50px;
+	height: 18px;
+	line-height: 18px;
+	text-decoration: none;
+	text-align: center;
+	float: left;
+	margin: 5px 0 0 5px;
+	font-weight: bold;
+}
+
+.cont-div{
+	margin: 0 5px;
+}
+/** WHITE BLOCK **/
+.filem-wh-tl{
+	background: url("../images/filem-wh-tl.png") no-repeat left top;
+	height: 5px;
+}
+.filem-wh-tr{
+	background: url("../images/filem-wh-tr.png") no-repeat right top;
+	height: 5px;
+}
+.filem-wh-tm{
+	background: url("../images/filem-wh-tm.png") repeat-x center top;
+	height: 5px;
+	margin: 0 5px;
+}
+.filem-wh-bl{
+	background: url("../images/filem-wh-bl.png") no-repeat left top;
+	height: 5px;
+}
+.filem-wh-br{
+	background: url("../images/filem-wh-br.png") no-repeat right top;
+	height: 5px;
+}
+.filem-wh-bm{
+	background: url("../images/filem-wh-bm.png") repeat-x center top;
+	height: 5px;
+	margin: 0 5px;
+}
+.filem-wh-ml{
+	background: url("../images/filem-wh-ml.png") repeat-y left center;
+}
+.filem-wh-mr{
+	background: url("../images/filem-wh-mr.png") repeat-y right center;
+}
+.filem-wh-mm{
+	background: #fff;
+	margin: 0 5px;
+	padding: 5px 0 0 5px;
+	overflow: hidden;
+}
